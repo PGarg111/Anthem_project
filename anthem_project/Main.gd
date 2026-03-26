@@ -1,12 +1,19 @@
 extends Node2D
 
 @onready var game_piece : Sprite2D = $game_piece
-@onready var spot_two : Marker2D = $Spot2
+@export var game_spaces : Array[Node]
+var place : int = 0
+var number_of_spaces : int
 
+func _ready():
+	number_of_spaces = game_spaces.size()
 
 
 func _unhandled_input(event: InputEvent):
-	if Input.is_action_just_pressed("start_game"):
+	if Input.is_action_just_pressed("start_game") and place <= (number_of_spaces - 1):
 		var tween = create_tween()
-		tween.tween_property(game_piece, "position", spot_two.position, 1)
+		tween.tween_property(game_piece, "position", game_spaces[place].position, 1)
+		place += 1
+	elif place >= number_of_spaces:
+		print("Place is out of bounds")
 	
