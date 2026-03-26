@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvgejy3gkk04y"]
+
+[ext_resource type="Script" uid="uid://bit36b8ojp3gd" path="res://Main.gd" id="1_0e48y"]
+[ext_resource type="Texture2D" uid="uid://dm750pn8u7y8p" path="res://images/Screenshot 2026-03-26 at 5.16.22 PM.png" id="2_epypp"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_0e48y")
+
+[node name="game_piece" type="Sprite2D" parent="."]
+position = Vector2(104, 81.75)
+scale = Vector2(0.606061, 0.537736)
+texture = ExtResource("2_epypp")
+
+[node name="Spot2" type="Marker2D" parent="."]
+position = Vector2(87, 226)
+gizmo_extents = 75.5
