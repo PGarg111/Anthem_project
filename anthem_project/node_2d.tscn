@@ -6,7 +6,7 @@
 
 [node name="Node2D" type="Node2D" node_paths=PackedStringArray("game_spaces")]
 script = ExtResource("1_0e48y")
-game_spaces = [NodePath("Start"), NodePath("SpotOne"), NodePath("SpotTwo"), NodePath("SpotThree"), NodePath("SpotFour"), NodePath("SpotFive"), NodePath("SpotSix")]
+game_spaces = [NodePath("Start"), NodePath("SpotOne"), NodePath("SpotTwo"), NodePath("SpotThree"), NodePath("SpotFour"), NodePath("SpotFive"), NodePath("SpotSix"), NodePath("SpotSeven"), NodePath("SpotEight")]
 
 [node name="board" type="Sprite2D" parent="."]
 position = Vector2(579, 325)
@@ -43,5 +43,19 @@ position = Vector2(874, 98)
 gizmo_extents = 75.5
 
 [node name="SpotSix" type="Marker2D" parent="."]
-position = Vector2(1021, 99)
+position = Vector2(1022, 99)
 gizmo_extents = 75.5
+
+[node name="SpotSeven" type="Marker2D" parent="."]
+position = Vector2(1023, 210)
+gizmo_extents = 75.5
+
+[node name="SpotEight" type="Marker2D" parent="."]
+position = Vector2(1023, 321)
+gizmo_extents = 75.5
+
+[node name="backwards" type="Label" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Move Backwards One Space"

@@ -1,6 +1,8 @@
 extends Node2D
 
 @onready var game_piece : Sprite2D = $game_piece
+@onready var backwards1 : Marker2D = $SpotSix
+@onready var backwardsLabel : Label = $backwards
 @export var game_spaces : Array[Node]
 var place : int = 0
 var number_of_spaces : int
@@ -16,4 +18,7 @@ func _unhandled_input(event: InputEvent):
 		place += 1
 	elif place >= number_of_spaces:
 		print("Place is out of bounds")
+		
+	if game_piece.position == backwards1.position:
+		backwardsLabel.visible
 	
