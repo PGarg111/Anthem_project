@@ -86,17 +86,10 @@ text = "Click on the button on the space to learn about that space. Some spaces 
 autowrap_mode = 3
 
 [node name="Button2" type="Button" parent="CanvasLayer"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -229.0
-offset_top = 71.0
-offset_right = 211.0
-offset_bottom = 147.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = 365.0
+offset_top = 446.0
+offset_right = 805.0
+offset_bottom = 522.0
 theme_override_colors/font_hover_color = Color(0.960784, 0.815686, 0.376471, 1)
 theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
 theme_override_fonts/font = SubResource("FontVariation_bs210")
