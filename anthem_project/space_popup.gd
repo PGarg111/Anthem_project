@@ -7,8 +7,9 @@ signal action_pressed
 @onready var action_button = $PanelContainer/VBoxContainer/Button
 
 func show_popup(title: String, description: String, action_text: String = ""):
+	print("title: ", title, " description: ", description) 
 	title_label.text = title
-	description_label = description
+	description_label.text = description
 	if action_text != "":
 		action_button.text = action_text
 		action_button.visible = true

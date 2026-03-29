@@ -11,14 +11,14 @@ var current_player_moving : int = 0
 var number_of_spaces : int
 
 var space_data = {
-	"SpotOne": {"title": "Something", "desc": "Something", "action": "", "move": 0},
-	"SpotTwo": {"title": "Something", "desc": "Something", "action": "Move Backwards", "move": -1},
-	"SpotThree": {"title": "Something", "desc": "Something", "action": "", "move": 0},
-	"SpotFour": {"title": "Something", "desc": "Something", "action": "", "move": 0},
-	"SpotFive": {"title": "Something", "desc": "Something", "action": "", "move": 0},
-	"SpotSix": {"title": "Something", "desc": "Something", "action": "", "move": 0},
-	"SpotSeven": {"title": "Something", "desc": "Something", "action": "", "move": 0},
-	"SpotEight": {"title": "Something", "desc": "Something", "action": "", "move": 0}
+	"SpotOne": {"title": "    Something", "description": "   Something", "action": "Nothing", "move": 0},
+	"SpotTwo": {"title": "    Something", "description": "   Something", "action": "Move Backwards", "move": -1},
+	"SpotThree": {"title": "    Something", "description": "   Something", "action": "Nothing", "move": 0},
+	"SpotFour": {"title": "    Something", "description": "   Something", "action": "Nothing", "move": 0},
+	"SpotFive": {"title": "   Something", "description": "   Something", "action": "Nothing", "move": 0},
+	"SpotSix": {"title": "    Something", "description": "   Something", "action": "Nothing", "move": 0},
+	"SpotSeven": {"title": "    Something", "description": "   Something", "action": "Nothing", "move": 0},
+	"SpotEight": {"title": "    Something", "description": "   Something", "action": "Nothing", "move": 0}
 }
 
 func _ready():
@@ -60,7 +60,7 @@ func show_space_popup(space_index: int):
 	var spot_name = game_spaces[space_index].name
 	if space_data.has(spot_name):
 		var data = space_data[spot_name]
-		popup.show_popup(data["title"], data["desc"], data["action"])
+		popup.show_popup(data["title"], data["description"], data["action"])
 
 func _on_popup_action():
 	var index = get_current_index()

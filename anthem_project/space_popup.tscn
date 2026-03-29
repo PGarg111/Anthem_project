@@ -1,23 +1,92 @@
-[gd_scene load_steps=2 format=3 uid="uid://dago4rjwdn8c4"]
+[gd_scene load_steps=11 format=3 uid="uid://dago4rjwdn8c4"]
 
 [ext_resource type="Script" uid="uid://losdx4r173b3" path="res://space_popup.gd" id="1_jd27a"]
+[ext_resource type="FontFile" uid="uid://dn1ia1w7hcdbo" path="res://Assests/Lato-Regular.ttf" id="2_mnffx"]
+[ext_resource type="FontFile" uid="uid://b4f6wbb36mjp6" path="res://Assests/JosefinSans-VariableFont_wght.ttf" id="3_ch3ba"]
+[ext_resource type="FontFile" uid="uid://wfavt178s5xk" path="res://Assests/CinzelDecorative-Bold.ttf" id="4_ch3ba"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nv3xc"]
+bg_color = Color(0.117647, 0.101961, 0.0784314, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_nv3xc"]
+base_font = ExtResource("2_mnffx")
+variation_embolden = 1.38
+
+[sub_resource type="FontVariation" id="FontVariation_ch3ba"]
+base_font = ExtResource("3_ch3ba")
+variation_embolden = 1.15
+spacing_top = 5
+
+[sub_resource type="FontVariation" id="FontVariation_2nxso"]
+base_font = ExtResource("4_ch3ba")
+variation_embolden = 0.25
+spacing_glyph = 3
+spacing_space = 3
+spacing_top = 7
+spacing_bottom = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_txq3l"]
+bg_color = Color(0.117647, 0.101961, 0.0784314, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.360784, 0.270588, 0.0627451, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wyd5f"]
+bg_color = Color(0.117647, 0.101961, 0.0784314, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [node name="Space Popup" type="CanvasLayer"]
 script = ExtResource("1_jd27a")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
-offset_right = 40.0
-offset_bottom = 50.0
+custom_minimum_size = Vector2(0, 250)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -146.0
+offset_top = -94.0
+offset_right = 127.0
+offset_bottom = 94.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nv3xc")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
 
 [node name="Label" type="Label" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nv3xc")
+theme_override_font_sizes/font_size = 20
+text = "        "
 
 [node name="Label2" type="Label" parent="PanelContainer/VBoxContainer"]
+z_index = 3
+custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.960784, 0.815686, 0.376471, 1)
+theme_override_fonts/font = SubResource("FontVariation_ch3ba")
+theme_override_font_sizes/font_size = 20
 
 [node name="Button" type="Button" parent="PanelContainer/VBoxContainer"]
 visible = false
 layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.960784, 0.815686, 0.376471, 1)
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_2nxso")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/hover = SubResource("StyleBoxFlat_txq3l")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wyd5f")
