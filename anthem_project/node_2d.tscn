@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://cvgejy3gkk04y"]
+[gd_scene load_steps=8 format=3 uid="uid://cvgejy3gkk04y"]
 
 [ext_resource type="Script" uid="uid://bit36b8ojp3gd" path="res://Main.gd" id="1_0e48y"]
 [ext_resource type="Texture2D" uid="uid://c60wfvwhb32ho" path="res://images/Untitled_design__10_-removebg-preview.png" id="2_0hol4"]
 [ext_resource type="Texture2D" uid="uid://dm750pn8u7y8p" path="res://images/Screenshot 2026-03-26 at 5.16.22 PM.png" id="2_epypp"]
+[ext_resource type="Texture2D" uid="uid://bjq8kcx826pjw" path="res://images/Screenshot 2026-03-26 at 5.15.41 PM.png" id="5_kdubu"]
+[ext_resource type="PackedScene" uid="uid://dago4rjwdn8c4" path="res://space_popup.tscn" id="5_q6r6c"]
 
 [sub_resource type="Gradient" id="Gradient_rrv11"]
 colors = PackedColorArray(0.227451, 0.180392, 0.117647, 1, 0.054902, 0.0470588, 0.0392157, 1)
@@ -33,6 +35,11 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(579, 325)
 scale = Vector2(1.89706, 1.59314)
 texture = ExtResource("2_0hol4")
+
+[node name="game_piece2" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(147, 63)
+scale = Vector2(0.245338, 0.157757)
+texture = ExtResource("5_kdubu")
 
 [node name="game_piece" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(144, 97)
@@ -75,8 +82,4 @@ gizmo_extents = 75.5
 position = Vector2(1023, 321)
 gizmo_extents = 75.5
 
-[node name="backwards" type="Label" parent="CanvasLayer"]
-visible = false
-offset_right = 216.0
-offset_bottom = 23.0
-text = "Move Backwards One Space"
+[node name="SpacePopup" parent="." instance=ExtResource("5_q6r6c")]
