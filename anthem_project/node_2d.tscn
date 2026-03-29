@@ -1,61 +1,82 @@
-[gd_scene load_steps=4 format=3 uid="uid://cvgejy3gkk04y"]
+[gd_scene load_steps=6 format=3 uid="uid://cvgejy3gkk04y"]
 
 [ext_resource type="Script" uid="uid://bit36b8ojp3gd" path="res://Main.gd" id="1_0e48y"]
 [ext_resource type="Texture2D" uid="uid://c60wfvwhb32ho" path="res://images/Untitled_design__10_-removebg-preview.png" id="2_0hol4"]
 [ext_resource type="Texture2D" uid="uid://dm750pn8u7y8p" path="res://images/Screenshot 2026-03-26 at 5.16.22 PM.png" id="2_epypp"]
 
+[sub_resource type="Gradient" id="Gradient_rrv11"]
+colors = PackedColorArray(0.227451, 0.180392, 0.117647, 1, 0.054902, 0.0470588, 0.0392157, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_epypp"]
+gradient = SubResource("Gradient_rrv11")
+width = 1152
+height = 648
+fill = 1
+fill_from = Vector2(0.50625, 0.1)
+
 [node name="Node2D" type="Node2D" node_paths=PackedStringArray("game_spaces")]
 script = ExtResource("1_0e48y")
-game_spaces = [NodePath("Start"), NodePath("SpotOne"), NodePath("SpotTwo"), NodePath("SpotThree"), NodePath("SpotFour"), NodePath("SpotFive"), NodePath("SpotSix"), NodePath("SpotSeven"), NodePath("SpotEight")]
+game_spaces = [NodePath("CanvasLayer/Start"), NodePath("CanvasLayer/SpotOne"), NodePath("CanvasLayer/SpotTwo"), NodePath("CanvasLayer/SpotThree"), NodePath("CanvasLayer/SpotFour"), NodePath("CanvasLayer/SpotFive"), NodePath("CanvasLayer/SpotSix"), NodePath("CanvasLayer/SpotSeven"), NodePath("CanvasLayer/SpotEight")]
 
-[node name="board" type="Sprite2D" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_epypp")
+metadata/_edit_use_anchors_ = true
+
+[node name="board" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(579, 325)
 scale = Vector2(1.89706, 1.59314)
 texture = ExtResource("2_0hol4")
 
-[node name="game_piece" type="Sprite2D" parent="."]
+[node name="game_piece" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(144, 97)
 scale = Vector2(0.606061, 0.537736)
 texture = ExtResource("2_epypp")
 
-[node name="Start" type="Marker2D" parent="."]
+[node name="Start" type="Marker2D" parent="CanvasLayer"]
 position = Vector2(145, 97)
 gizmo_extents = 75.5
 
-[node name="SpotOne" type="Marker2D" parent="."]
+[node name="SpotOne" type="Marker2D" parent="CanvasLayer"]
 position = Vector2(291, 97)
 gizmo_extents = 75.5
 
-[node name="SpotTwo" type="Marker2D" parent="."]
+[node name="SpotTwo" type="Marker2D" parent="CanvasLayer"]
 position = Vector2(439, 97)
 gizmo_extents = 75.5
 
-[node name="SpotThree" type="Marker2D" parent="."]
+[node name="SpotThree" type="Marker2D" parent="CanvasLayer"]
 position = Vector2(584, 97)
 gizmo_extents = 75.5
 
-[node name="SpotFour" type="Marker2D" parent="."]
+[node name="SpotFour" type="Marker2D" parent="CanvasLayer"]
 position = Vector2(728, 97)
 gizmo_extents = 75.5
 
-[node name="SpotFive" type="Marker2D" parent="."]
+[node name="SpotFive" type="Marker2D" parent="CanvasLayer"]
 position = Vector2(874, 98)
 gizmo_extents = 75.5
 
-[node name="SpotSix" type="Marker2D" parent="."]
+[node name="SpotSix" type="Marker2D" parent="CanvasLayer"]
 position = Vector2(1022, 99)
 gizmo_extents = 75.5
 
-[node name="SpotSeven" type="Marker2D" parent="."]
+[node name="SpotSeven" type="Marker2D" parent="CanvasLayer"]
 position = Vector2(1023, 210)
 gizmo_extents = 75.5
 
-[node name="SpotEight" type="Marker2D" parent="."]
+[node name="SpotEight" type="Marker2D" parent="CanvasLayer"]
 position = Vector2(1023, 321)
 gizmo_extents = 75.5
 
-[node name="backwards" type="Label" parent="."]
+[node name="backwards" type="Label" parent="CanvasLayer"]
 visible = false
-offset_right = 40.0
+offset_right = 216.0
 offset_bottom = 23.0
 text = "Move Backwards One Space"

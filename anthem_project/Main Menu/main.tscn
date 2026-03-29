@@ -1,0 +1,179 @@
+[gd_scene load_steps=12 format=3 uid="uid://bibsq5aenx0aj"]
+
+[ext_resource type="FontFile" uid="uid://dqpwiaq7lkab7" path="res://Assests/CinzelDecorative-Black.ttf" id="1_b2o8g"]
+[ext_resource type="FontFile" uid="uid://b4f6wbb36mjp6" path="res://Assests/JosefinSans-VariableFont_wght.ttf" id="2_r2hpd"]
+[ext_resource type="FontFile" uid="uid://wfavt178s5xk" path="res://Assests/CinzelDecorative-Bold.ttf" id="3_8gs50"]
+[ext_resource type="Script" uid="uid://dyxrmlj6uba14" path="res://Main Menu/instructions.gd" id="4_n5yvu"]
+[ext_resource type="FontFile" uid="uid://dn1ia1w7hcdbo" path="res://Assests/Lato-Regular.ttf" id="5_r2hpd"]
+
+[sub_resource type="Gradient" id="Gradient_b2o8g"]
+colors = PackedColorArray(0.227451, 0.180392, 0.117647, 1, 0.054902, 0.0470588, 0.0392157, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ig7tw"]
+gradient = SubResource("Gradient_b2o8g")
+width = 1152
+height = 648
+fill = 1
+fill_from = Vector2(0.50625, 0.1)
+
+[sub_resource type="FontVariation" id="FontVariation_0xm2m"]
+base_font = ExtResource("2_r2hpd")
+variation_embolden = 2.0
+spacing_glyph = 4
+
+[sub_resource type="FontVariation" id="FontVariation_1bvp3"]
+base_font = ExtResource("3_8gs50")
+variation_embolden = 0.25
+spacing_glyph = 3
+spacing_space = 3
+spacing_top = 7
+spacing_bottom = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h2yge"]
+bg_color = Color(0.117647, 0.101961, 0.0784314, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.360784, 0.270588, 0.0627451, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lquwl"]
+bg_color = Color(0.117647, 0.101961, 0.0784314, 1)
+border_color = Color(0.360784, 0.270588, 0.0627451, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_ig7tw")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 1.0
+offset_top = 19.0
+offset_right = 1.0
+offset_bottom = 152.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = ExtResource("1_b2o8g")
+theme_override_font_sizes/font_size = 98
+text = "Anthem"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 1.0
+offset_top = -179.0
+offset_right = 1.0
+offset_bottom = -159.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.542444, 0.403033, 0.0191686, 1)
+theme_override_fonts/font = SubResource("FontVariation_0xm2m")
+theme_override_font_sizes/font_size = 19
+text = "A game of discovery"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -143.0
+offset_top = -80.0
+offset_right = 152.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(0.960784, 0.815686, 0.376471, 1)
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_1bvp3")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/hover = SubResource("StyleBoxFlat_h2yge")
+theme_override_styles/normal = SubResource("StyleBoxFlat_lquwl")
+text = "How to Play"
+script = ExtResource("4_n5yvu")
+
+[node name="Button2" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = 13.0
+offset_right = 153.0
+offset_bottom = 89.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(0.960784, 0.815686, 0.376471, 1)
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_1bvp3")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/hover = SubResource("StyleBoxFlat_h2yge")
+theme_override_styles/normal = SubResource("StyleBoxFlat_lquwl")
+text = "Start"
+script = ExtResource("4_n5yvu")
+
+[node name="Button3" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.5
+offset_top = 104.0
+offset_right = 152.5
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(0.960784, 0.815686, 0.376471, 1)
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_1bvp3")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/hover = SubResource("StyleBoxFlat_h2yge")
+theme_override_styles/normal = SubResource("StyleBoxFlat_lquwl")
+text = "Exit"
+script = ExtResource("4_n5yvu")
+
+[node name="Label3" type="Label" parent="CanvasLayer"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -31.0
+offset_right = 8.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.364116, 0.327656, 0.273026, 1)
+theme_override_fonts/font = ExtResource("5_r2hpd")
+theme_override_font_sizes/font_size = 14
+text = "Based on the book Anthem by Ayn Rand"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button2" to="CanvasLayer/Button" method="_on_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button3" to="CanvasLayer/Button" method="_on_button_3_pressed"]

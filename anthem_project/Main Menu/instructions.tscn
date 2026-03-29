@@ -1,0 +1,109 @@
+[gd_scene load_steps=9 format=3 uid="uid://bsloy1q384ivn"]
+
+[ext_resource type="FontFile" uid="uid://dn1ia1w7hcdbo" path="res://Assests/Lato-Regular.ttf" id="1_we5vv"]
+[ext_resource type="FontFile" uid="uid://wfavt178s5xk" path="res://Assests/CinzelDecorative-Bold.ttf" id="2_a0cjb"]
+[ext_resource type="Script" uid="uid://dbal7dxflallp" path="res://Main Menu/button.gd" id="3_a0cjb"]
+
+[sub_resource type="Gradient" id="Gradient_7dm0k"]
+colors = PackedColorArray(0.227451, 0.180392, 0.117647, 1, 0.054902, 0.0470588, 0.0392157, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_iaf26"]
+gradient = SubResource("Gradient_7dm0k")
+width = 1152
+height = 648
+fill = 1
+fill_from = Vector2(0.50625, 0.1)
+
+[sub_resource type="FontVariation" id="FontVariation_bs210"]
+base_font = ExtResource("2_a0cjb")
+variation_embolden = 0.25
+spacing_glyph = 3
+spacing_space = 3
+spacing_top = 7
+spacing_bottom = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fvygg"]
+bg_color = Color(0.117647, 0.101961, 0.0784314, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.360784, 0.270588, 0.0627451, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_282ry"]
+bg_color = Color(0.117647, 0.101961, 0.0784314, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="Instructions" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_iaf26")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+offset_left = 129.0
+offset_top = 150.0
+offset_right = 1024.0
+offset_bottom = 183.0
+theme_override_colors/font_color = Color(0.960784, 0.815686, 0.376471, 1)
+theme_override_fonts/font = ExtResource("1_we5vv")
+theme_override_font_sizes/font_size = 27
+text = "Player 1 - Press the \"1\" on the keyboard to move forward when it is your turn"
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 129.0
+offset_top = 186.0
+offset_right = 1024.0
+offset_bottom = 219.0
+theme_override_colors/font_color = Color(0.960784, 0.815686, 0.376471, 1)
+theme_override_fonts/font = ExtResource("1_we5vv")
+theme_override_font_sizes/font_size = 27
+text = "Player 2 - Press the \"2\" on the keyboard to move forward when it is your turn"
+
+[node name="Label3" type="Label" parent="CanvasLayer"]
+offset_left = 126.0
+offset_top = 235.0
+offset_right = 1025.0
+offset_bottom = 362.0
+theme_override_colors/font_color = Color(0.960784, 0.815686, 0.376471, 1)
+theme_override_fonts/font = ExtResource("1_we5vv")
+theme_override_font_sizes/font_size = 28
+text = "Click on the button on the space to learn about that space. Some spaces have actions to be completed. These actions will complete themselves by clicking on the button in the popup."
+autowrap_mode = 3
+
+[node name="Button2" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -229.0
+offset_top = 71.0
+offset_right = 211.0
+offset_bottom = 147.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(0.960784, 0.815686, 0.376471, 1)
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_bs210")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/hover = SubResource("StyleBoxFlat_fvygg")
+theme_override_styles/normal = SubResource("StyleBoxFlat_282ry")
+text = "Return to Main Menu"
+script = ExtResource("3_a0cjb")
+
+[connection signal="pressed" from="CanvasLayer/Button2" to="CanvasLayer/Button2" method="_on_pressed"]
