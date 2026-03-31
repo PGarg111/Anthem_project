@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=3 uid="uid://de2ot5ijad8fp"]
+
+[ext_resource type="Texture2D" uid="uid://ceytrthcjke86" path="res://dice.png" id="1_ju2fo"]
+[ext_resource type="Script" uid="uid://h4wrbsbuea2l" path="res://Main Menu/dice.gd" id="1_m4jp2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qu4n6"]
+size = Vector2(114, 112)
+
+[node name="Dice" type="StaticBody2D"]
+input_pickable = true
+script = ExtResource("1_m4jp2")
+
+[node name="faces" type="Node2D" parent="."]
+
+[node name="1" type="Sprite2D" parent="faces"]
+scale = Vector2(7, 7)
+texture = ExtResource("1_ju2fo")
+region_enabled = true
+region_rect = Rect2(0, 0, 16.069324, 16)
+
+[node name="2" type="Sprite2D" parent="faces"]
+scale = Vector2(7, 7)
+texture = ExtResource("1_ju2fo")
+region_enabled = true
+region_rect = Rect2(0, 0, 16.069324, 16)
+
+[node name="3" type="Sprite2D" parent="faces"]
+scale = Vector2(7, 7)
+texture = ExtResource("1_ju2fo")
+region_enabled = true
+region_rect = Rect2(31.974613, 0, 16.025414, 16)
+
+[node name="4" type="Sprite2D" parent="faces"]
+scale = Vector2(7, 7)
+texture = ExtResource("1_ju2fo")
+region_enabled = true
+region_rect = Rect2(47.80219, 0, 16.421093, 16)
+
+[node name="5" type="Sprite2D" parent="faces"]
+scale = Vector2(7, 7)
+texture = ExtResource("1_ju2fo")
+region_enabled = true
+region_rect = Rect2(63.827602, 0, 16.4211, 16)
+
+[node name="6" type="Sprite2D" parent="faces"]
+scale = Vector2(7, 7)
+texture = ExtResource("1_ju2fo")
+region_enabled = true
+region_rect = Rect2(80.2487, 0, 15.82756, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_qu4n6")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
