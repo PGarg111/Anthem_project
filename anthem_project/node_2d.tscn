@@ -32,54 +32,64 @@ texture = SubResource("GradientTexture2D_epypp")
 metadata/_edit_use_anchors_ = true
 
 [node name="board" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(579, 325)
-scale = Vector2(1.89706, 1.59314)
+position = Vector2(726.5, 324.001)
+scale = Vector2(1.89893, 1.59314)
 texture = ExtResource("2_0hol4")
 
 [node name="game_piece2" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(147, 63)
-scale = Vector2(0.245338, 0.157757)
+position = Vector2(289.5, 62.0006)
+scale = Vector2(0.24558, 0.157757)
 texture = ExtResource("5_kdubu")
 
 [node name="game_piece" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(144, 97)
-scale = Vector2(0.606061, 0.537736)
+position = Vector2(286.5, 96.0005)
+scale = Vector2(0.606659, 0.537736)
 texture = ExtResource("2_epypp")
 
 [node name="Start" type="Marker2D" parent="CanvasLayer"]
-position = Vector2(145, 97)
+position = Vector2(287.5, 96.0005)
+scale = Vector2(1.00099, 1)
 gizmo_extents = 75.5
 
 [node name="SpotOne" type="Marker2D" parent="CanvasLayer"]
-position = Vector2(291, 97)
+position = Vector2(433.5, 96.0005)
+scale = Vector2(1.00099, 1)
 gizmo_extents = 75.5
 
 [node name="SpotTwo" type="Marker2D" parent="CanvasLayer"]
-position = Vector2(439, 97)
+position = Vector2(581.5, 96.0005)
+scale = Vector2(1.00099, 1)
 gizmo_extents = 75.5
 
 [node name="SpotThree" type="Marker2D" parent="CanvasLayer"]
-position = Vector2(584, 97)
+position = Vector2(726.5, 96.0005)
+scale = Vector2(1.00099, 1)
 gizmo_extents = 75.5
 
 [node name="SpotFour" type="Marker2D" parent="CanvasLayer"]
-position = Vector2(728, 97)
+position = Vector2(870.5, 96.0005)
+scale = Vector2(1.00099, 1)
 gizmo_extents = 75.5
 
 [node name="SpotFive" type="Marker2D" parent="CanvasLayer"]
-position = Vector2(874, 98)
+position = Vector2(1016.5, 97.0005)
+scale = Vector2(1.00099, 1)
 gizmo_extents = 75.5
 
 [node name="SpotSix" type="Marker2D" parent="CanvasLayer"]
-position = Vector2(1022, 99)
+position = Vector2(1164.5, 98.0005)
+scale = Vector2(1.00099, 1)
 gizmo_extents = 75.5
 
 [node name="SpotSeven" type="Marker2D" parent="CanvasLayer"]
-position = Vector2(1023, 210)
+position = Vector2(1165.5, 209.001)
+scale = Vector2(1.00099, 1)
 gizmo_extents = 75.5
 
 [node name="SpotEight" type="Marker2D" parent="CanvasLayer"]
-position = Vector2(1023, 321)
+position = Vector2(1165.5, 320.001)
+scale = Vector2(1.00099, 1)
 gizmo_extents = 75.5
 
 [node name="SpacePopup" parent="." instance=ExtResource("5_q6r6c")]
+visible = false
