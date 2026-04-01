@@ -1,5 +1,6 @@
 extends Node2D
 
+@onready var sidebar = $CanvasLayer/SidebarLayer/PanelContainer
 @onready var game_piece : Sprite2D = $CanvasLayer/game_piece
 @onready var game_piece2 : Sprite2D = $CanvasLayer/game_piece2
 var last_landed_index : int = 0
@@ -25,6 +26,7 @@ func _ready():
 	number_of_spaces = game_spaces.size()
 	popup.visible = false
 	popup.action_pressed.connect(_on_popup_action)
+	sidebar.set_turn(1)
 
 
 func _unhandled_input(_event: InputEvent):
@@ -53,8 +55,10 @@ func move_player(player: int):
 	
 	if player == 1:
 		place += 1
+		sidebar.set_turn(2)
 	else:
 		place2 += 1
+		sidebar.set_turn(1)
 		
 func show_space_popup(space_index: int):
 	var spot_name = game_spaces[space_index].name
@@ -93,6 +97,11 @@ func _on_popup_action():
 		print("place2 after move: ", place2)
 		var tween = create_tween()
 		tween.tween_property(game_piece2, "position", game_spaces[place2].position, 1)
+	
+	if current_player_moving == 1:
+		sidebar.set_turn(2)
+	else:
+		sidebar.set_turn(1)
 		
 func get_current_index() -> int:
 	if current_player_moving == 1:

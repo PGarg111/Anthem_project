@@ -11,46 +11,49 @@ input_pickable = true
 script = ExtResource("1_m4jp2")
 
 [node name="faces" type="Node2D" parent="."]
+position = Vector2(123, 120)
 
 [node name="1" type="Sprite2D" parent="faces"]
 scale = Vector2(7, 7)
 texture = ExtResource("1_ju2fo")
 region_enabled = true
-region_rect = Rect2(0, 0, 16.069324, 16)
+region_rect = Rect2(0, 0, 16.0693, 16)
 
 [node name="2" type="Sprite2D" parent="faces"]
 scale = Vector2(7, 7)
 texture = ExtResource("1_ju2fo")
 region_enabled = true
-region_rect = Rect2(0, 0, 16.069324, 16)
+region_rect = Rect2(0, 0, 16.0693, 16)
 
 [node name="3" type="Sprite2D" parent="faces"]
 scale = Vector2(7, 7)
 texture = ExtResource("1_ju2fo")
 region_enabled = true
-region_rect = Rect2(31.974613, 0, 16.025414, 16)
+region_rect = Rect2(31.9746, 0, 16.0254, 16)
 
 [node name="4" type="Sprite2D" parent="faces"]
 scale = Vector2(7, 7)
 texture = ExtResource("1_ju2fo")
 region_enabled = true
-region_rect = Rect2(47.80219, 0, 16.421093, 16)
+region_rect = Rect2(47.8022, 0, 16.4211, 16)
 
 [node name="5" type="Sprite2D" parent="faces"]
 scale = Vector2(7, 7)
 texture = ExtResource("1_ju2fo")
 region_enabled = true
-region_rect = Rect2(63.827602, 0, 16.4211, 16)
+region_rect = Rect2(63.8276, 0, 16.4211, 16)
 
 [node name="6" type="Sprite2D" parent="faces"]
 scale = Vector2(7, 7)
 texture = ExtResource("1_ju2fo")
 region_enabled = true
-region_rect = Rect2(80.2487, 0, 15.82756, 16)
+region_rect = Rect2(80.2487, 0, 15.8276, 16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(123, 120)
 shape = SubResource("RectangleShape2D_qu4n6")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+visible = false
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

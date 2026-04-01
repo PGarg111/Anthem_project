@@ -1,10 +1,34 @@
-[gd_scene load_steps=8 format=3 uid="uid://cvgejy3gkk04y"]
+[gd_scene load_steps=15 format=3 uid="uid://cvgejy3gkk04y"]
 
 [ext_resource type="Script" uid="uid://bit36b8ojp3gd" path="res://Main.gd" id="1_0e48y"]
 [ext_resource type="Texture2D" uid="uid://c60wfvwhb32ho" path="res://images/Untitled_design__10_-removebg-preview.png" id="2_0hol4"]
 [ext_resource type="Texture2D" uid="uid://dm750pn8u7y8p" path="res://images/Screenshot 2026-03-26 at 5.16.22 PM.png" id="2_epypp"]
+[ext_resource type="Script" uid="uid://dgcfjoue6ec3p" path="res://sidebar.gd" id="2_rj586"]
+[ext_resource type="FontFile" uid="uid://dqpwiaq7lkab7" path="res://Assests/CinzelDecorative-Black.ttf" id="3_4d7sh"]
+[ext_resource type="FontFile" uid="uid://b4f6wbb36mjp6" path="res://Assests/JosefinSans-VariableFont_wght.ttf" id="4_4d7sh"]
+[ext_resource type="PackedScene" uid="uid://de2ot5ijad8fp" path="res://dice.tscn" id="5_d21ai"]
 [ext_resource type="Texture2D" uid="uid://bjq8kcx826pjw" path="res://images/Screenshot 2026-03-26 at 5.15.41 PM.png" id="5_kdubu"]
 [ext_resource type="PackedScene" uid="uid://dago4rjwdn8c4" path="res://space_popup.tscn" id="5_q6r6c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rj586"]
+bg_color = Color(0.117647, 0.101961, 0.0784314, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.360784, 0.270588, 0.0627451, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="FontVariation" id="FontVariation_ir8iy"]
+base_font = ExtResource("4_4d7sh")
+variation_embolden = 0.6
+
+[sub_resource type="FontVariation" id="FontVariation_hqns4"]
+base_font = ExtResource("4_4d7sh")
+variation_embolden = 0.6
 
 [sub_resource type="Gradient" id="Gradient_rrv11"]
 colors = PackedColorArray(0.227451, 0.180392, 0.117647, 1, 0.054902, 0.0470588, 0.0392157, 1)
@@ -22,6 +46,42 @@ game_spaces = [NodePath("CanvasLayer/Start"), NodePath("CanvasLayer/SpotOne"), N
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="SidebarLayer" type="CanvasLayer" parent="CanvasLayer"]
+layer = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/SidebarLayer"]
+offset_right = 236.0
+offset_bottom = 646.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rj586")
+script = ExtResource("2_rj586")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/SidebarLayer/PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/SidebarLayer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = ExtResource("3_4d7sh")
+theme_override_font_sizes/font_size = 32
+text = "Anthem"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/SidebarLayer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="CanvasLayer/SidebarLayer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.960784, 0.815686, 0.376471, 1)
+theme_override_fonts/font = SubResource("FontVariation_ir8iy")
+
+[node name="HSeparator2" type="HSeparator" parent="CanvasLayer/SidebarLayer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="CanvasLayer/SidebarLayer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.960784, 0.815686, 0.376471, 1)
+theme_override_fonts/font = SubResource("FontVariation_hqns4")
+
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 anchors_preset = 15
 anchor_right = 1.0
@@ -32,8 +92,9 @@ texture = SubResource("GradientTexture2D_epypp")
 metadata/_edit_use_anchors_ = true
 
 [node name="board" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(726.5, 324.001)
-scale = Vector2(1.89893, 1.59314)
+visible = false
+position = Vector2(718, 403.5)
+scale = Vector2(1.42484, 1.98284)
 texture = ExtResource("2_0hol4")
 
 [node name="game_piece2" type="Sprite2D" parent="CanvasLayer"]
@@ -90,6 +151,10 @@ gizmo_extents = 75.5
 position = Vector2(1165.5, 320.001)
 scale = Vector2(1.00099, 1)
 gizmo_extents = 75.5
+
+[node name="Dice" parent="CanvasLayer" instance=ExtResource("5_d21ai")]
+visible = false
+position = Vector2(410, 195)
 
 [node name="SpacePopup" parent="." instance=ExtResource("5_q6r6c")]
 visible = false
