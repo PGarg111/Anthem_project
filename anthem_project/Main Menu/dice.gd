@@ -2,12 +2,12 @@ extends StaticBody2D
 
 signal roll_done(index:int)
 
-@onready var faces: Node2D=$faces
+@onready var faces: Node2D = $faces
 
-var isRolling=false
-var currentIndex=0 
+var isRolling = false
+var currentIndex = 0 
 
-func _ready()->void:
+func _ready() -> void:
 	_set_start_face()
 	
 func _set_start_face():
@@ -21,20 +21,20 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 		_roll_dice()
 		
 func _roll_dice():
-		var duration:=1.0
+		var duration: = 1.0
 		
-		isRolling=true
+		isRolling = true
 		
-		while duration>0:
-			var newIndex=faces.get_children().pick_random().get_index()
+		while duration > 0:
+			var newIndex = faces.get_children().pick_random().get_index()
 			faces.get_child(currentIndex).hide()
 			faces.get_child(newIndex).show()
 			
 			await get_tree().create_timer(0.1).timeout
 			
-			currentIndex=newIndex
-			duration-=0.1
+			currentIndex = newIndex
+			duration -= 0.1
 			
-		isRolling=false
+		isRolling = false
 		
 		roll_done.emit(currentIndex+1)
