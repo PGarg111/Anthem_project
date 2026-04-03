@@ -52,29 +52,36 @@ func move_player(player: int, steps: int):
 	current_player_moving = player
 	var current_place = place if player == 1 else (place2 if player == 2 else place3)
 	var piece = game_piece if player == 1 else (game_piece2 if player == 2 else game_piece3)
+	
 	var target_place = clamp(current_place + steps, 0, number_of_spaces - 1)
 	last_landed_index = target_place
 	
 	var tween = create_tween()
 	for i in range(1, steps + 1):
 		var next = clamp(current_place + i, 0, number_of_spaces - 1)
-		tween.tween_property(piece, "position", game_spaces[next].position, 0.3)
+		tween.tween_property(piece, "position", game_spaces[next].position, 1)
 		
 	tween.finished.connect(func(): show_space_popup(target_place), CONNECT_ONE_SHOT)
 	
 	
 	if player == 1:
 		place = target_place + 1
-		sidebar.set_turn(2)
-		current_player_moving = 2
 	elif player == 2:
 		place2 = target_place + 1
-		sidebar.set_turn(3)
-		current_player_moving = 3
 	else:
 		place3 = target_place + 1
-		sidebar.set_turn(1)
+		
+func advance_turn():
+	if current_player_moving == 1:
+		current_player_moving = 2
+		sidebar.set_turn(2)
+	elif current_player_moving == 2:
+		current_player_moving = 3
+		sidebar.set_turn(3)
+	elif current_player_moving == 3:
 		current_player_moving = 1
+		sidebar.set_turn(1)
+	dice_enabled = true
 		
 func show_space_popup(space_index: int):
 	var spot_name = game_spaces[space_index].name
@@ -84,7 +91,7 @@ func show_space_popup(space_index: int):
 		popup.show_popup(data["title"], data["description"], data["action"])
 	else:
 		sidebar.set_status("No event. Next player's turn.")
-		dice_enabled = true
+		advance_turn()
 
 func _on_popup_action():
 	var index = get_current_index()
@@ -93,7 +100,7 @@ func _on_popup_action():
 	
 	if index < 0 or index >= number_of_spaces:
 		print("index out of bounds")
-		dice_enabled = true
+		advance_turn()
 		return
 	
 	var spot_name = game_spaces[index].name
@@ -101,7 +108,7 @@ func _on_popup_action():
 	
 	if not space_data.has(spot_name):
 		print("spot not in space_data")
-		dice_enabled = true
+		advance_turn()
 		return 
 		
 	var data = space_data[spot_name]
@@ -124,24 +131,27 @@ func _on_popup_action():
 		print("place3 after move: ", place3)
 		var tween = create_tween()
 		tween.tween_property(game_piece3, "position", game_spaces[place3].position, 1)
-		
-	if current_player_moving == 1:
-		sidebar.set_turn(2)
-		current_player_moving = 2
-	elif current_player_moving == 2:
-		sidebar.set_turn(3)
-		current_player_moving = 3
-	elif current_player_moving == 3:
-		sidebar.set_turn(1)
-		current_player_moving = 1
-	dice_enabled = true
+	
+	advance_turn()
+	
+	#if current_player_moving == 1:
+		#sidebar.set_turn(2)
+		#current_player_moving = 2
+	#elif current_player_moving == 2:
+		#sidebar.set_turn(3)
+		#current_player_moving = 3
+	#elif current_player_moving == 3:
+		#sidebar.set_turn(1)
+		#current_player_moving = 1
+	#dice_enabled = true
 
 
 func get_current_index() -> int:
-	if last_player_moved == 1:
-		return place - 1
-	elif last_player_moved == 2:
-		return place2 - 1
-	else:
-		return place3 - 1
+	return last_landed_index
+	#if last_player_moved == 1:
+		#return place - 1
+	#elif last_player_moved == 2:
+		#return place2 - 1
+	#else:
+		#return place3 - 1
 		
