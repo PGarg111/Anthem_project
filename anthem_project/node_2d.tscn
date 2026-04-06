@@ -1,8 +1,9 @@
-[gd_scene load_steps=16 format=3 uid="uid://cvgejy3gkk04y"]
+[gd_scene load_steps=20 format=3 uid="uid://cvgejy3gkk04y"]
 
 [ext_resource type="Script" uid="uid://bit36b8ojp3gd" path="res://Main.gd" id="1_0e48y"]
 [ext_resource type="Texture2D" uid="uid://c60wfvwhb32ho" path="res://images/Untitled_design__10_-removebg-preview.png" id="2_0hol4"]
 [ext_resource type="Texture2D" uid="uid://dm750pn8u7y8p" path="res://images/Screenshot 2026-03-26 at 5.16.22 PM.png" id="2_epypp"]
+[ext_resource type="Texture2D" uid="uid://bf88sfc24mtl8" path="res://Assests/gradient.tres" id="2_nr8wp"]
 [ext_resource type="Script" uid="uid://dgcfjoue6ec3p" path="res://sidebar.gd" id="2_rj586"]
 [ext_resource type="FontFile" uid="uid://dqpwiaq7lkab7" path="res://Assests/CinzelDecorative-Black.ttf" id="3_4d7sh"]
 [ext_resource type="FontFile" uid="uid://b4f6wbb36mjp6" path="res://Assests/JosefinSans-VariableFont_wght.ttf" id="4_4d7sh"]
@@ -10,6 +11,14 @@
 [ext_resource type="PackedScene" uid="uid://de2ot5ijad8fp" path="res://dice.tscn" id="5_d21ai"]
 [ext_resource type="Texture2D" uid="uid://bjq8kcx826pjw" path="res://images/Screenshot 2026-03-26 at 5.15.41 PM.png" id="5_kdubu"]
 [ext_resource type="PackedScene" uid="uid://dago4rjwdn8c4" path="res://space_popup.tscn" id="5_q6r6c"]
+[ext_resource type="Texture2D" uid="uid://dsmi6pdcdec56" path="res://images/Screenshot_2026-04-06_at_5.22.32_PM-removebg-preview.png" id="9_d2bti"]
+[ext_resource type="Texture2D" uid="uid://bny3f2q8bxvgi" path="res://images/Screenshot_2026-04-06_at_3.51.54_PM-removebg-preview.png" id="10_x0ka3"]
+[ext_resource type="Texture2D" uid="uid://dhu7v0j7cxqwq" path="res://images/Screenshot_2026-04-06_at_4.00.06_PM-removebg-preview.png" id="11_0h7mo"]
+[ext_resource type="Texture2D" uid="uid://dx1wlkd6i2tim" path="res://images/Screenshot_2026-04-06_at_4.04.16_PM-removebg-preview.png" id="12_0h7mo"]
+
+[sub_resource type="FontVariation" id="FontVariation_nr8wp"]
+base_font = ExtResource("4_4d7sh")
+variation_embolden = 0.97
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rj586"]
 bg_color = Color(0.117647, 0.101961, 0.0784314, 1)
@@ -31,19 +40,157 @@ variation_embolden = 1.32
 base_font = ExtResource("4_4d7sh")
 variation_embolden = 0.6
 
-[sub_resource type="Gradient" id="Gradient_rrv11"]
-colors = PackedColorArray(0.227451, 0.180392, 0.117647, 1, 0.054902, 0.0470588, 0.0392157, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_epypp"]
-gradient = SubResource("Gradient_rrv11")
-width = 1152
-height = 648
-fill = 1
-fill_from = Vector2(0.50625, 0.1)
-
 [node name="Node2D" type="Node2D" node_paths=PackedStringArray("game_spaces")]
 script = ExtResource("1_0e48y")
-game_spaces = [NodePath("CanvasLayer/Start"), NodePath("CanvasLayer/SpotOne"), NodePath("CanvasLayer/SpotTwo"), NodePath("CanvasLayer/SpotThree"), NodePath("CanvasLayer/SpotFour"), NodePath("CanvasLayer/SpotFive"), NodePath("CanvasLayer/SpotSix"), NodePath("CanvasLayer/SpotSeven")]
+game_spaces = [NodePath("Start"), NodePath("SpotOne"), NodePath("SpotTwo"), NodePath("SpotThree"), NodePath("SpotFour"), NodePath("SpotFive"), NodePath("SpotSix"), NodePath("SpotSeven")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(751, 835)
+scale = Vector2(0.699653, 2.57716)
+texture = ExtResource("2_nr8wp")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 7.62939e-06)
+scale = Vector2(1, 1)
+offset = Vector2(0, -95)
+anchor_mode = 0
+limit_left = 360
+limit_top = -50
+limit_right = 1152
+limit_bottom = 870
+position_smoothing_enabled = true
+editor_draw_limits = true
+
+[node name="Start" type="Marker2D" parent="."]
+position = Vector2(488, 96)
+scale = Vector2(1.00099, 1)
+gizmo_extents = 75.5
+
+[node name="SpotOne" type="Marker2D" parent="."]
+position = Vector2(640, 96)
+scale = Vector2(1.00099, 1)
+gizmo_extents = 75.5
+
+[node name="SpotTwo" type="Marker2D" parent="."]
+position = Vector2(792, 96)
+scale = Vector2(1.00099, 1)
+gizmo_extents = 75.5
+
+[node name="SpotThree" type="Marker2D" parent="."]
+position = Vector2(937, 96)
+scale = Vector2(1.00099, 1)
+gizmo_extents = 75.5
+
+[node name="SpotFour" type="Marker2D" parent="."]
+position = Vector2(937, 244)
+scale = Vector2(1.00099, 1)
+gizmo_extents = 75.5
+
+[node name="SpotFive" type="Marker2D" parent="."]
+position = Vector2(959.799, 435.5)
+scale = Vector2(1.00198, 1)
+gizmo_extents = 75.5
+
+[node name="SpotSix" type="Marker2D" parent="."]
+position = Vector2(956.799, 630.5)
+scale = Vector2(1.00397, 1)
+gizmo_extents = 75.5
+
+[node name="SpotSeven" type="Marker2D" parent="."]
+position = Vector2(957, 821)
+scale = Vector2(1.00795, 1)
+gizmo_extents = 75.5
+
+[node name="Spaces" type="Sprite2D" parent="."]
+
+[node name="Space1" type="Sprite2D" parent="Spaces"]
+position = Vector2(638.25, 97)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_x0ka3")
+
+[node name="Label" type="Label" parent="Spaces/Space1"]
+offset_left = -200.0
+offset_top = -196.0
+offset_right = 184.0
+offset_bottom = -124.0
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 71
+text = "We Are One"
+metadata/_edit_use_anchors_ = true
+
+[node name="Space2" type="Sprite2D" parent="Spaces"]
+position = Vector2(791.25, 97)
+scale = Vector2(0.235, 0.235)
+texture = ExtResource("11_0h7mo")
+
+[node name="Label" type="Label" parent="Spaces/Space2"]
+offset_left = -217.021
+offset_top = -221.277
+offset_right = 212.979
+offset_bottom = -74.2766
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 71
+text = "No Name, No Face"
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Space3" type="Sprite2D" parent="Spaces"]
+position = Vector2(935.25, 95)
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("12_0h7mo")
+
+[node name="Label" type="Label" parent="Spaces/Space3"]
+offset_left = -212.766
+offset_top = -200.0
+offset_right = 217.234
+offset_bottom = -53.0
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 71
+text = "Assigned, Not Chosen"
+horizontal_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Space4" type="Sprite2D" parent="Spaces"]
+position = Vector2(938, 248)
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("9_d2bti")
+
+[node name="Label" type="Label" parent="Spaces/Space4"]
+anchors_preset = -1
+anchor_left = 0.00105469
+anchor_top = 0.000669242
+anchor_right = 0.00105469
+anchor_bottom = 0.000669242
+offset_left = -213.0
+offset_top = 103.833
+offset_right = 217.0
+offset_bottom = 250.833
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 61
+text = "The Hours are Set"
+horizontal_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="game_piece2" type="Sprite2D" parent="."]
+position = Vector2(487, 95)
+scale = Vector2(0.24558, 0.157757)
+texture = ExtResource("5_kdubu")
+
+[node name="game_piece" type="Sprite2D" parent="."]
+position = Vector2(488, 96)
+scale = Vector2(0.606659, 0.537736)
+texture = ExtResource("2_epypp")
+
+[node name="game_piece3" type="Sprite2D" parent="."]
+position = Vector2(488, 97)
+scale = Vector2(0.730769, 0.148148)
+texture = ExtResource("5_kdubu")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -52,7 +199,7 @@ layer = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/SidebarLayer"]
 offset_right = 356.0
-offset_bottom = 646.0
+offset_bottom = 669.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_rj586")
 script = ExtResource("2_rj586")
@@ -97,12 +244,13 @@ layer = 3
 position = Vector2(-49, 453)
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+visible = false
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.51389
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("GradientTexture2D_epypp")
+texture = ExtResource("2_nr8wp")
 metadata/_edit_use_anchors_ = true
 
 [node name="board" type="Sprite2D" parent="CanvasLayer"]
@@ -110,61 +258,6 @@ visible = false
 position = Vector2(926, 378)
 scale = Vector2(1.87868, 1.98284)
 texture = ExtResource("2_0hol4")
-
-[node name="game_piece2" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(495, 94)
-scale = Vector2(0.24558, 0.157757)
-texture = ExtResource("5_kdubu")
-
-[node name="game_piece" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(495, 94)
-scale = Vector2(0.606659, 0.537736)
-texture = ExtResource("2_epypp")
-
-[node name="game_piece3" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(496, 91)
-scale = Vector2(0.730769, 0.148148)
-texture = ExtResource("5_kdubu")
-
-[node name="Start" type="Marker2D" parent="CanvasLayer"]
-position = Vector2(490.575, 92.5)
-scale = Vector2(1.00099, 1)
-gizmo_extents = 75.5
-
-[node name="SpotOne" type="Marker2D" parent="CanvasLayer"]
-position = Vector2(636.575, 92.5)
-scale = Vector2(1.00099, 1)
-gizmo_extents = 75.5
-
-[node name="SpotTwo" type="Marker2D" parent="CanvasLayer"]
-position = Vector2(784.575, 92.5)
-scale = Vector2(1.00099, 1)
-gizmo_extents = 75.5
-
-[node name="SpotThree" type="Marker2D" parent="CanvasLayer"]
-position = Vector2(929.575, 92.5)
-scale = Vector2(1.00099, 1)
-gizmo_extents = 75.5
-
-[node name="SpotFour" type="Marker2D" parent="CanvasLayer"]
-position = Vector2(1073.57, 92.5)
-scale = Vector2(1.00099, 1)
-gizmo_extents = 75.5
-
-[node name="SpotFive" type="Marker2D" parent="CanvasLayer"]
-position = Vector2(966, 254)
-scale = Vector2(1.00198, 1)
-gizmo_extents = 75.5
-
-[node name="SpotSix" type="Marker2D" parent="CanvasLayer"]
-position = Vector2(963, 449)
-scale = Vector2(1.00397, 1)
-gizmo_extents = 75.5
-
-[node name="SpotSeven" type="Marker2D" parent="CanvasLayer"]
-position = Vector2(1929.82, 898)
-scale = Vector2(1.00795, 1)
-gizmo_extents = 75.5
 
 [node name="SpacePopup" parent="." instance=ExtResource("5_q6r6c")]
 visible = false

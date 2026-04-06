@@ -1,12 +1,24 @@
 extends Node2D
 
 @onready var sidebar = $CanvasLayer/SidebarLayer/PanelContainer
-@onready var game_piece : Sprite2D = $CanvasLayer/game_piece
-@onready var game_piece2 : Sprite2D = $CanvasLayer/game_piece2
-@onready var game_piece3 : Sprite2D = $CanvasLayer/game_piece3
+@onready var game_piece : Sprite2D = $game_piece
+@onready var game_piece2 : Sprite2D = $game_piece2
+@onready var game_piece3 : Sprite2D = $game_piece3
 @onready var dice = $CanvasLayer/DiceLayer/Dice
 @export var game_spaces : Array[Node]
 @onready var popup = $SpacePopup
+@onready var camera : Camera2D = $Camera2D
+var lose_turn = {1: false, 2: false, 3: false}
+
+func _process(_delta):
+	var target_piece : Sprite2D
+	if current_player_moving == 1:
+		target_piece = game_piece
+	elif current_player_moving == 2:
+		target_piece = game_piece2
+	else:
+		target_piece = game_piece3
+	camera.position = camera.position.lerp(target_piece.position, 0.1)
 
 var last_landed_index : int = 0
 var place : int = 0
@@ -18,8 +30,8 @@ var number_of_spaces : int
 var dice_enabled : bool = true
 
 var space_data = {
-	"SpotTwo": {"title": "    Something", "description": "   Something", "action": "Move Backwards", "move": -1},
-	"SpotFour": {"title": "    Something", "description": "   Something", "action": "Nothing", "move": 0}
+	"SpotTwo": {"title": "    Assigned, Not Chosen", "description": "   The council has decided your fate before you could even dream of choosing it yourself, pushing you further from who you truly are.", "action": "Move Backwards", "move": -1},
+	"SpotFour": {"title": "    The Hours are Set", "description": "   The very minute of your day is owned by the collective, so you don't have time to think, wonder, or act.", "action": "Lose Turn", "move": 0}
 }
 
 func _ready():
@@ -29,11 +41,19 @@ func _ready():
 	dice.roll_done.connect(_on_roll_done)
 	current_player_moving = 1
 	sidebar.set_turn(1)
-	sidebar.set_turn(1)
+	await get_tree().process_frame
+	camera.position = game_piece.position
 
 func _on_roll_done(steps: int):
 	if not dice_enabled:
 		print("dice disabled, ignoring roll")
+		return
+	
+	if lose_turn[current_player_moving]:
+		sidebar.set_status("Player " + str(current_player_moving) + " loses their turn!")
+		lose_turn[current_player_moving] = false
+		await get_tree().create_timer(2.0).timeout
+		advance_turn()
 		return
 	dice_enabled = false
 	print("rolled: ", steps)
@@ -112,21 +132,26 @@ func _on_popup_action():
 		return 
 		
 	var data = space_data[spot_name]
+	var action = data["action"]
 	var move_amount = data["move"]
 	print("move amount: ", move_amount)
 	
+	if action == "Lose Turn":
+		lose_turn[last_player_moved] = true
+		advance_turn()
+		return
 	
-	if current_player_moving == 1:
+	if last_player_moved == 1:
 		place = clamp(last_landed_index + move_amount, 0, number_of_spaces - 1)
 		print("place after move: ", place)
 		var tween = create_tween()
 		tween.tween_property(game_piece, "position", game_spaces[place].position, 1)
-	elif current_player_moving == 2:
+	elif last_player_moved == 2:
 		place2 = clamp(last_landed_index + move_amount, 0, number_of_spaces - 1)
 		print("place2 after move: ", place2)
 		var tween = create_tween()
 		tween.tween_property(game_piece2, "position", game_spaces[place2].position, 1)
-	elif current_player_moving == 3:
+	elif last_player_moved == 3:
 		place3 = clamp(last_landed_index + move_amount, 0, number_of_spaces - 1)
 		print("place3 after move: ", place3)
 		var tween = create_tween()
