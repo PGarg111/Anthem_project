@@ -30,8 +30,9 @@ var number_of_spaces : int
 var dice_enabled : bool = true
 
 var space_data = {
-	"SpotTwo": {"title": "    Assigned, Not Chosen", "description": "   The council has decided your fate before you could even dream of choosing it yourself, pushing you further from who you truly are.", "action": "Move Backwards", "move": -1},
-	"SpotFour": {"title": "    The Hours are Set", "description": "   The very minute of your day is owned by the collective, so you don't have time to think, wonder, or act.", "action": "Lose Turn", "move": 0}
+	"SpotTwo": {"title": "    Assigned, Not Chosen", "description": "   The council has decided your fate before you could even dream of choosing it yourself, pushing you further from who you truly are.", "action": "Move Backward 1 Space", "move": -1},
+	"SpotFour": {"title": "    The Hours are Set", "description": "   The very minute of your day is owned by the collective, so you don't have time to think, wonder, or act.", "action": "Lose Turn", "move": 0},
+	"SpotSeven": {"title": "    Speak only when Spoken To", "description": "   You have a thought burning inside you, but the rules of the collective force you swallow it whole and step back.", "action": "Move Backward 1 Space", "move": -1}
 }
 
 func _ready():
