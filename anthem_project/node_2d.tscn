@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cvgejy3gkk04y"]
+[gd_scene load_steps=47 format=3 uid="uid://cvgejy3gkk04y"]
 
 [ext_resource type="Script" uid="uid://bit36b8ojp3gd" path="res://Main.gd" id="1_0e48y"]
 [ext_resource type="Texture2D" uid="uid://c60wfvwhb32ho" path="res://images/Untitled_design__10_-removebg-preview.png" id="2_0hol4"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bf88sfc24mtl8" path="res://Assests/gradient.tres" id="2_nr8wp"]
 [ext_resource type="Script" uid="uid://dgcfjoue6ec3p" path="res://sidebar.gd" id="2_rj586"]
 [ext_resource type="FontFile" uid="uid://dqpwiaq7lkab7" path="res://Assests/CinzelDecorative-Black.ttf" id="3_4d7sh"]
+[ext_resource type="Texture2D" uid="uid://djv14l8ahkkua" path="res://images/Image_from_iOS-removebg-preview.png" id="3_fs4d3"]
 [ext_resource type="FontFile" uid="uid://b4f6wbb36mjp6" path="res://Assests/JosefinSans-VariableFont_wght.ttf" id="4_4d7sh"]
 [ext_resource type="FontFile" uid="uid://dn1ia1w7hcdbo" path="res://Assests/Lato-Regular.ttf" id="4_ir8iy"]
 [ext_resource type="PackedScene" uid="uid://de2ot5ijad8fp" path="res://dice.tscn" id="5_d21ai"]
@@ -14,14 +15,38 @@
 [ext_resource type="Texture2D" uid="uid://lbcronxce0kr" path="res://images/Screenshot_2026-04-06_at_5.43.54_PM-removebg-preview.png" id="8_k73cj"]
 [ext_resource type="Texture2D" uid="uid://dsmi6pdcdec56" path="res://images/Screenshot_2026-04-06_at_5.22.32_PM-removebg-preview.png" id="9_d2bti"]
 [ext_resource type="Texture2D" uid="uid://ci3wf25y7xwhl" path="res://images/Screenshot_2026-04-06_at_5.48.02_PM-removebg-preview.png" id="9_rjqkl"]
-[ext_resource type="Texture2D" uid="uid://bx47g7m5nbr3q" path="res://Screenshot_2026-04-06_at_8.33.29_PM-removebg-preview.png" id="10_fs4d3"]
+[ext_resource type="Texture2D" uid="uid://bx47g7m5nbr3q" path="res://images/Screenshot_2026-04-06_at_8.33.29_PM-removebg-preview.png" id="10_fs4d3"]
 [ext_resource type="Texture2D" uid="uid://bny3f2q8bxvgi" path="res://images/Screenshot_2026-04-06_at_3.51.54_PM-removebg-preview.png" id="10_x0ka3"]
 [ext_resource type="Texture2D" uid="uid://dhu7v0j7cxqwq" path="res://images/Screenshot_2026-04-06_at_4.00.06_PM-removebg-preview.png" id="11_0h7mo"]
 [ext_resource type="Texture2D" uid="uid://dx1wlkd6i2tim" path="res://images/Screenshot_2026-04-06_at_4.04.16_PM-removebg-preview.png" id="12_0h7mo"]
+[ext_resource type="Texture2D" uid="uid://du53b0pfi75ve" path="res://images/Screenshot_2026-04-07_at_3.39.14_PM-removebg-preview.png" id="12_7vxoj"]
+[ext_resource type="Texture2D" uid="uid://drqp00ijep55p" path="res://images/Screenshot_2026-04-07_at_3.46.42_PM-removebg-preview.png" id="13_gt76g"]
+[ext_resource type="Texture2D" uid="uid://c5dqiyut6yivq" path="res://images/Screenshot_2026-04-07_at_4.18.51_PM-removebg-preview.png" id="14_1fr6y"]
+[ext_resource type="Texture2D" uid="uid://bgblml5tderl3" path="res://images/Screenshot_2026-04-07_at_4.23.05_PM-removebg-preview.png" id="15_2hxjc"]
+[ext_resource type="Texture2D" uid="uid://cnw2tfqyq2hs1" path="res://images/Screenshot_2026-04-07_at_4.26.20_PM-removebg-preview.png" id="16_ebxd8"]
+[ext_resource type="Texture2D" uid="uid://40rhwotrevxh" path="res://images/Screenshot_2026-04-07_at_4.29.30_PM-removebg-preview.png" id="17_2u7jv"]
+[ext_resource type="Texture2D" uid="uid://cnb65ownbphk6" path="res://images/Screenshot_2026-04-07_at_4.32.09_PM-removebg-preview.png" id="18_24dk6"]
+[ext_resource type="Texture2D" uid="uid://drcrjn7ypxlmr" path="res://Main Menu/Screenshot_2026-04-07_at_4.35.13_PM-removebg-preview.png" id="19_mryly"]
+[ext_resource type="Texture2D" uid="uid://can5atrijhpvw" path="res://images/Screenshot_2026-04-07_at_4.38.07_PM-removebg-preview.png" id="20_kq1c5"]
+[ext_resource type="Texture2D" uid="uid://bcabwyc7m1prt" path="res://images/Screenshot_2026-04-07_at_4.42.00_PM-removebg-preview.png" id="21_ornx7"]
+[ext_resource type="Texture2D" uid="uid://cjdjvrjo6wxvp" path="res://images/Screenshot_2026-04-07_at_4.47.02_PM-removebg-preview.png" id="22_cnnru"]
+[ext_resource type="Texture2D" uid="uid://brcs6dtdofcbo" path="res://images/Screenshot_2026-04-07_at_4.50.49_PM-removebg-preview.png" id="23_540hr"]
+[ext_resource type="Texture2D" uid="uid://c6fxnknun8p2v" path="res://images/Screenshot_2026-04-07_at_4.51.05_PM-removebg-preview.png" id="24_6ip5v"]
+[ext_resource type="Texture2D" uid="uid://bni02in4p8h3r" path="res://images/Screenshot_2026-04-07_at_4.58.53_PM-removebg-preview.png" id="25_kq1c5"]
+[ext_resource type="Texture2D" uid="uid://mlymkn52ky6d" path="res://images/Screenshot_2026-04-07_at_5.07.56_PM-removebg-preview.png" id="26_ornx7"]
+[ext_resource type="Texture2D" uid="uid://chplk1waqe3ge" path="res://images/Screenshot_2026-04-07_at_8.14.25_PM-removebg-preview.png" id="27_cnnru"]
+[ext_resource type="Texture2D" uid="uid://cedtdh5jhlwdk" path="res://images/Screenshot_2026-04-07_at_8.19.00_PM-removebg-preview.png" id="28_540hr"]
+[ext_resource type="Texture2D" uid="uid://fryehiisp4r2" path="res://images/Screenshot_2026-04-07_at_8.44.36_PM-removebg-preview.png" id="29_6ip5v"]
+[ext_resource type="Texture2D" uid="uid://dp7lcrkv5nhak" path="res://images/Screenshot_2026-04-07_at_8.46.15_PM-removebg-preview.png" id="30_q5dlx"]
+[ext_resource type="Texture2D" uid="uid://didxhjexkk500" path="res://images/Screenshot_2026-04-07_at_8.49.04_PM-removebg-preview.png" id="31_c4wnb"]
+[ext_resource type="Texture2D" uid="uid://dncxett2kl3vm" path="res://images/Screenshot_2026-04-07_at_8.51.21_PM-removebg-preview.png" id="32_7plk7"]
+[ext_resource type="Texture2D" uid="uid://fjcqcsdouv6j" path="res://images/Screenshot_2026-04-07_at_8.54.23_PM-removebg-preview.png" id="33_fbwgr"]
+[ext_resource type="Texture2D" uid="uid://c66sfceksg2x1" path="res://images/Screenshot_2026-04-07_at_8.56.03_PM-removebg-preview.png" id="34_7mj2a"]
 
 [sub_resource type="FontVariation" id="FontVariation_nr8wp"]
 base_font = ExtResource("4_4d7sh")
 variation_embolden = 0.97
+spacing_top = 9
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rj586"]
 bg_color = Color(0.117647, 0.101961, 0.0784314, 1)
@@ -44,17 +69,17 @@ base_font = ExtResource("4_4d7sh")
 variation_embolden = 0.6
 
 [node name="Node2D" type="Node2D" node_paths=PackedStringArray("game_spaces")]
+position = Vector2(1, 0)
 script = ExtResource("1_0e48y")
-game_spaces = [NodePath("Start"), NodePath("SpotOne"), NodePath("SpotTwo"), NodePath("SpotThree"), NodePath("SpotFour"), NodePath("SpotFive"), NodePath("SpotSix"), NodePath("SpotSeven")]
+game_spaces = [NodePath("Start"), NodePath("SpotOne"), NodePath("SpotTwo"), NodePath("SpotThree"), NodePath("SpotFour"), NodePath("SpotFive"), NodePath("SpotSix"), NodePath("SpotSeven"), NodePath("SpotEight"), NodePath("SpotNine"), NodePath("SpotTen"), NodePath("Spot11"), NodePath("Spot12"), NodePath("Spot13"), NodePath("Spot14"), NodePath("Spot15"), NodePath("Spot16"), NodePath("Spot17"), NodePath("Spot18"), NodePath("Spot19"), NodePath("Spot20"), NodePath("Spot21"), NodePath("Spot22"), NodePath("Spot23"), NodePath("Spot24"), NodePath("Spot25"), NodePath("Spot26"), NodePath("Spot27"), NodePath("Spot28"), NodePath("Spot29"), NodePath("Spot30")]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(751, 835)
-scale = Vector2(0.699653, 2.57716)
+position = Vector2(751, 1182)
+scale = Vector2(0.699653, 3.64815)
 texture = ExtResource("2_nr8wp")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 7.62939e-06)
-scale = Vector2(1, 1)
 offset = Vector2(0, -95)
 anchor_mode = 0
 limit_left = 360
@@ -104,7 +129,120 @@ position = Vector2(649, 352)
 scale = Vector2(1.00795, 1)
 gizmo_extents = 75.5
 
+[node name="SpotEight" type="Marker2D" parent="."]
+position = Vector2(492, 352)
+scale = Vector2(1.01596, 1)
+gizmo_extents = 75.5
+
+[node name="SpotNine" type="Marker2D" parent="."]
+position = Vector2(492, 480)
+gizmo_extents = 56.0
+
+[node name="SpotTen" type="Marker2D" parent="."]
+position = Vector2(496, 608)
+gizmo_extents = 56.0
+
+[node name="Spot11" type="Marker2D" parent="."]
+position = Vector2(743, 615)
+gizmo_extents = 56.0
+
+[node name="Spot12" type="Marker2D" parent="."]
+position = Vector2(991, 736)
+gizmo_extents = 56.0
+
+[node name="Spot13" type="Marker2D" parent="."]
+position = Vector2(737, 870)
+gizmo_extents = 56.0
+
+[node name="Spot14" type="Marker2D" parent="."]
+position = Vector2(473, 1025)
+gizmo_extents = 56.0
+
+[node name="Spot15" type="Marker2D" parent="."]
+position = Vector2(472, 1176)
+gizmo_extents = 56.0
+
+[node name="Spot16" type="Marker2D" parent="."]
+position = Vector2(474, 1320)
+gizmo_extents = 56.0
+
+[node name="Spot17" type="Marker2D" parent="."]
+position = Vector2(666, 1460)
+gizmo_extents = 56.0
+
+[node name="Spot18" type="Marker2D" parent="."]
+position = Vector2(738, 1301)
+gizmo_extents = 56.0
+
+[node name="Spot19" type="Marker2D" parent="."]
+position = Vector2(736, 1128)
+gizmo_extents = 56.0
+
+[node name="Spot20" type="Marker2D" parent="."]
+position = Vector2(977, 1130)
+gizmo_extents = 56.0
+
+[node name="Spot21" type="Marker2D" parent="."]
+position = Vector2(1027, 1334)
+gizmo_extents = 56.0
+
+[node name="Spot22" type="Marker2D" parent="."]
+position = Vector2(732, 1580)
+gizmo_extents = 56.0
+
+[node name="Spot23" type="Marker2D" parent="."]
+position = Vector2(1021, 1728)
+gizmo_extents = 56.0
+
+[node name="Spot24" type="Marker2D" parent="."]
+position = Vector2(817, 1732)
+gizmo_extents = 56.0
+
+[node name="Spot25" type="Marker2D" parent="."]
+position = Vector2(642, 1729)
+gizmo_extents = 56.0
+
+[node name="Spot26" type="Marker2D" parent="."]
+position = Vector2(468, 1800)
+gizmo_extents = 56.0
+
+[node name="Spot27" type="Marker2D" parent="."]
+position = Vector2(634, 1919)
+gizmo_extents = 56.0
+
+[node name="Spot28" type="Marker2D" parent="."]
+position = Vector2(828, 1920)
+gizmo_extents = 56.0
+
+[node name="Spot29" type="Marker2D" parent="."]
+position = Vector2(1024, 1964)
+gizmo_extents = 56.0
+
+[node name="Spot30" type="Marker2D" parent="."]
+position = Vector2(929, 2193)
+gizmo_extents = 56.0
+
 [node name="Spaces" type="Sprite2D" parent="."]
+
+[node name="Start" type="Sprite2D" parent="Spaces"]
+position = Vector2(486, 96)
+scale = Vector2(0.27, 0.27)
+texture = ExtResource("3_fs4d3")
+
+[node name="Label" type="Label" parent="Spaces/Start"]
+anchors_preset = -1
+anchor_left = -0.455426
+anchor_right = -0.455426
+offset_left = 90.5556
+offset_top = -174.074
+offset_right = 388.556
+offset_bottom = -72.0741
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 101
+text = "Start"
+uppercase = true
+metadata/_edit_use_anchors_ = true
 
 [node name="Space1" type="Sprite2D" parent="Spaces"]
 position = Vector2(638.25, 97)
@@ -112,14 +250,21 @@ scale = Vector2(0.25, 0.25)
 texture = ExtResource("10_x0ka3")
 
 [node name="Label" type="Label" parent="Spaces/Space1"]
-offset_left = -200.0
-offset_top = -196.0
-offset_right = 184.0
-offset_bottom = -124.0
+anchors_preset = -1
+anchor_left = -0.0856031
+anchor_top = 0.291667
+anchor_right = -0.0856031
+anchor_bottom = 0.291667
+offset_left = -197.0
+offset_top = -356.0
+offset_right = 279.0
+offset_bottom = -144.0
 theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
 theme_override_fonts/font = SubResource("FontVariation_nr8wp")
 theme_override_font_sizes/font_size = 71
 text = "We Are One"
+autowrap_mode = 3
+uppercase = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Space2" type="Sprite2D" parent="Spaces"]
@@ -128,15 +273,20 @@ scale = Vector2(0.235, 0.235)
 texture = ExtResource("11_0h7mo")
 
 [node name="Label" type="Label" parent="Spaces/Space2"]
-offset_left = -217.021
-offset_top = -221.277
-offset_right = 212.979
-offset_bottom = -74.2766
+anchors_preset = -1
+anchor_left = -0.000297913
+anchor_top = 8.51135e-05
+anchor_bottom = 8.51135e-05
+offset_left = -230.851
+offset_top = -234.043
+offset_right = 229.0
+offset_bottom = -69.0426
 theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
 theme_override_fonts/font = SubResource("FontVariation_nr8wp")
 theme_override_font_sizes/font_size = 71
 text = "No Name, No Face"
 autowrap_mode = 3
+uppercase = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Space3" type="Sprite2D" parent="Spaces"]
@@ -145,16 +295,22 @@ scale = Vector2(0.24, 0.24)
 texture = ExtResource("12_0h7mo")
 
 [node name="Label" type="Label" parent="Spaces/Space3"]
-offset_left = -212.766
-offset_top = -200.0
-offset_right = 217.234
-offset_bottom = -53.0
+anchors_preset = -1
+anchor_left = 0.00075
+anchor_top = 0.000333344
+anchor_right = 0.00075
+anchor_bottom = 0.000333344
+offset_left = -209.75
+offset_top = -316.833
+offset_right = 215.25
+offset_bottom = -67.8333
 theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
 theme_override_fonts/font = SubResource("FontVariation_nr8wp")
 theme_override_font_sizes/font_size = 71
 text = "Assigned, Not Chosen"
 horizontal_alignment = 1
 autowrap_mode = 3
+uppercase = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Space4" type="Sprite2D" parent="Spaces"]
@@ -164,20 +320,40 @@ texture = ExtResource("9_d2bti")
 
 [node name="Label" type="Label" parent="Spaces/Space4"]
 anchors_preset = -1
-anchor_left = 0.00105469
-anchor_top = 0.000669242
-anchor_right = 0.00105469
-anchor_bottom = 0.000669242
-offset_left = -213.0
-offset_top = 103.833
-offset_right = 217.0
-offset_bottom = 250.833
+anchor_left = 0.000661568
+anchor_top = -0.151606
+anchor_right = 0.000661568
+anchor_bottom = -0.151606
+offset_left = -215.314
+offset_top = 231.5
+offset_right = 209.686
+offset_bottom = 302.5
 theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
 theme_override_fonts/font = SubResource("FontVariation_nr8wp")
 theme_override_font_sizes/font_size = 61
-text = "The Hours are Set"
+text = "are Set"
 horizontal_alignment = 1
 autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Spaces/Space4"]
+anchors_preset = -1
+anchor_left = -0.00988695
+anchor_top = -0.151606
+anchor_right = -0.00988695
+anchor_bottom = -0.151606
+offset_left = -214.397
+offset_top = -226.583
+offset_right = 215.603
+offset_bottom = -79.5833
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 61
+text = "The hours"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Space5" type="Sprite2D" parent="Spaces"]
@@ -187,20 +363,59 @@ texture = ExtResource("8_k73cj")
 
 [node name="Label" type="Label" parent="Spaces/Space5"]
 anchors_preset = -1
-anchor_left = 0.00105469
-anchor_top = 0.000669242
-anchor_right = 0.00105469
-anchor_bottom = 0.000669242
-offset_left = -225.525
-offset_top = 137.172
-offset_right = 204.475
-offset_bottom = 284.172
+anchor_left = 0.000460613
+anchor_top = 0.00151953
+anchor_right = 0.024557
+anchor_bottom = 0.00151978
+offset_left = -227.934
+offset_top = 151.339
+offset_right = 202.066
+offset_bottom = 298.339
 theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
 theme_override_fonts/font = SubResource("FontVariation_nr8wp")
 theme_override_font_sizes/font_size = 61
-text = "Learn or Else"
+text = "Else"
 horizontal_alignment = 1
 autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Spaces/Space5"]
+anchors_preset = -1
+anchor_left = 0.000460613
+anchor_top = 0.00151953
+anchor_right = 0.000460613
+anchor_bottom = 0.00151953
+offset_left = -223.767
+offset_top = -219.495
+offset_right = 218.233
+offset_bottom = -72.4946
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 61
+text = "Learn"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="Spaces/Space5"]
+anchors_preset = -1
+anchor_left = 0.000460613
+anchor_top = 0.00151953
+anchor_right = 0.024557
+anchor_bottom = 0.00151978
+offset_left = -227.934
+offset_top = -56.9946
+offset_right = 202.066
+offset_bottom = 90.0053
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 61
+text = "or"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Space6" type="Sprite2D" parent="Spaces"]
@@ -224,6 +439,7 @@ theme_override_font_sizes/font_size = 61
 text = "We Sweep as One"
 horizontal_alignment = 1
 autowrap_mode = 3
+uppercase = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Space7" type="Sprite2D" parent="Spaces"]
@@ -237,16 +453,942 @@ anchor_left = 0.00105469
 anchor_top = 0.000669242
 anchor_right = 0.00105469
 anchor_bottom = 0.000669242
-offset_left = -221.359
-offset_top = -187.828
-offset_right = 208.641
-offset_bottom = -40.8279
+offset_left = -220.535
+offset_top = -212.329
+offset_right = 209.465
+offset_bottom = 6.67076
 theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
 theme_override_fonts/font = SubResource("FontVariation_nr8wp")
 theme_override_font_sizes/font_size = 61
 text = "Speak Only When Spoken To"
 horizontal_alignment = 1
 autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Space8" type="Sprite2D" parent="Spaces"]
+position = Vector2(493, 348)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("12_7vxoj")
+
+[node name="Label" type="Label" parent="Spaces/Space8"]
+anchors_preset = -1
+anchor_left = -0.0297144
+anchor_top = -0.176414
+anchor_right = -0.0297144
+anchor_bottom = -0.176414
+offset_left = -220.548
+offset_top = -215.321
+offset_right = 243.452
+offset_bottom = -70.3213
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 80
+text = "The Great"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Space9" type="Sprite2D" parent="Spaces"]
+position = Vector2(494, 479)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("13_gt76g")
+
+[node name="Label" type="Label" parent="Spaces/Space9"]
+anchors_preset = -1
+anchor_left = 0.00105471
+anchor_top = -0.176414
+anchor_right = 0.00105471
+anchor_bottom = -0.176414
+offset_left = -248.572
+offset_top = -122.85
+offset_right = 239.428
+offset_bottom = 81.1505
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 56
+text = "Secrets"
+horizontal_alignment = 1
+autowrap_mode = 2
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Spaces/Space9"]
+anchors_preset = -1
+anchor_left = -0.000122464
+anchor_top = 0.00143751
+anchor_bottom = 0.00143751
+offset_left = -251.934
+offset_top = 151.339
+offset_right = 248.0
+offset_bottom = 298.339
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 61
+text = "Underground"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Space10" type="Sprite2D" parent="Spaces"]
+position = Vector2(498, 612)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("14_1fr6y")
+
+[node name="Label" type="Label" parent="Spaces/Space10"]
+anchors_preset = -1
+anchor_left = 0.00105536
+anchor_top = -0.176415
+anchor_right = 0.00105536
+anchor_bottom = -0.176415
+offset_left = -225.572
+offset_top = 199.008
+offset_right = 204.428
+offset_bottom = 270.008
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 61
+text = "Hours"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Spaces/Space10"]
+anchors_preset = -1
+anchor_left = -0.725882
+anchor_top = 0.628243
+anchor_right = -0.725882
+anchor_bottom = 0.628243
+offset_left = 111.285
+offset_top = -510.42
+offset_right = 147.285
+offset_bottom = -69.4203
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 61
+text = "Stoeln"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Checkpoint1" type="Sprite2D" parent="Spaces"]
+position = Vector2(739, 614)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("15_2hxjc")
+
+[node name="Label" type="Label" parent="Spaces/Checkpoint1"]
+anchors_preset = -1
+anchor_left = -0.0920221
+anchor_top = -0.175509
+anchor_right = 0.00148438
+anchor_bottom = -0.175509
+offset_left = -179.143
+offset_top = 131.865
+offset_right = 250.857
+offset_bottom = 274.865
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 61
+text = "The Crack in the Tunnel"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Space12" type="Sprite2D" parent="Spaces"]
+position = Vector2(991, 741)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("16_ebxd8")
+
+[node name="Label" type="Label" parent="Spaces/Space12"]
+anchors_preset = -1
+anchor_left = 0.00105471
+anchor_top = -0.176414
+anchor_right = 0.00105471
+anchor_bottom = -0.176414
+offset_left = -214.855
+offset_top = -111.354
+offset_right = 215.145
+offset_bottom = 31.6461
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 61
+text = "Forbidden Darkness"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Checkpoint2" type="Sprite2D" parent="Spaces"]
+position = Vector2(739, 874)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("17_2u7jv")
+
+[node name="Label" type="Label" parent="Spaces/Checkpoint2"]
+anchors_preset = -1
+anchor_left = -0.0912624
+anchor_top = -0.17419
+anchor_right = -0.086
+anchor_bottom = -0.17419
+offset_left = -157.449
+offset_top = -181.482
+offset_right = 274.088
+offset_bottom = -38.4822
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 61
+text = "The Golden One"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Space13" type="Sprite2D" parent="Spaces"]
+position = Vector2(475.06, 1028.08)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("18_24dk6")
+
+[node name="Label" type="Label" parent="Spaces/Space13"]
+anchors_preset = -1
+anchor_left = 0.00105471
+anchor_top = -0.176414
+anchor_right = 0.00105471
+anchor_bottom = -0.176414
+offset_left = -218.415
+offset_top = -102.447
+offset_right = 211.585
+offset_bottom = 40.5531
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 61
+text = "Eyes Meet"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Spaces/Space13"]
+anchors_preset = -1
+anchor_left = 0.00105471
+anchor_top = -0.176414
+anchor_right = 0.00105471
+anchor_bottom = -0.176414
+offset_left = -218.415
+offset_top = 222.553
+offset_right = 211.585
+offset_bottom = 365.553
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 61
+text = "In Secret"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Space14" type="Sprite2D" parent="Spaces"]
+position = Vector2(474.06, 1176.08)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("19_mryly")
+
+[node name="Label" type="Label" parent="Spaces/Space14"]
+anchors_preset = -1
+anchor_left = 0.00105471
+anchor_top = -0.176414
+anchor_right = 0.00105471
+anchor_bottom = -0.176414
+offset_left = -214.805
+offset_top = 139.442
+offset_right = 215.195
+offset_bottom = 284.442
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 61
+text = "forbidden words"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Space15" type="Sprite2D" parent="Spaces"]
+position = Vector2(471.06, 1323.08)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("20_kq1c5")
+
+[node name="Label" type="Label" parent="Spaces/Space15"]
+anchors_preset = -1
+anchor_left = -0.0976677
+anchor_top = -0.176132
+anchor_right = -0.0976677
+anchor_bottom = -0.176132
+offset_left = -187.876
+offset_top = 135.442
+offset_right = 242.124
+offset_bottom = 354.442
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 61
+text = "She calls me "
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Checkpoint3" type="Sprite2D" parent="Spaces"]
+position = Vector2(668, 1455)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("21_ornx7")
+
+[node name="Label" type="Label" parent="Spaces/Checkpoint3"]
+anchors_preset = -1
+anchor_left = -0.534591
+anchor_top = -0.175622
+anchor_right = -0.534591
+anchor_bottom = -0.175622
+offset_left = 276.698
+offset_top = -148.708
+offset_right = 391.698
+offset_bottom = -77.7077
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 61
+text = "let"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Spaces/Checkpoint3"]
+anchors_preset = -1
+anchor_left = -0.53524
+anchor_top = -3.77734
+anchor_right = -0.53524
+anchor_bottom = -3.77734
+offset_left = 387.161
+offset_top = 1180.79
+offset_right = 602.161
+offset_bottom = 1302.79
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 61
+text = "there"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="Spaces/Checkpoint3"]
+anchors_preset = -1
+anchor_left = -1.07446
+anchor_top = -3.77591
+anchor_right = -1.07446
+anchor_bottom = -3.77591
+offset_left = 1069.66
+offset_top = 1245.29
+offset_right = 1181.66
+offset_bottom = 1390.29
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 61
+text = "b
+e"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Label4" type="Label" parent="Spaces/Checkpoint3"]
+anchors_preset = -1
+anchor_left = -1.07516
+anchor_top = -3.77304
+anchor_right = -1.07516
+anchor_bottom = -3.77304
+offset_left = 737.661
+offset_top = 1389.79
+offset_right = 1035.66
+offset_bottom = 1464.79
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 61
+text = "light"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Space16" type="Sprite2D" parent="Spaces"]
+position = Vector2(741, 1303)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("22_cnnru")
+
+[node name="Label" type="Label" parent="Spaces/Space16"]
+anchors_preset = -1
+anchor_left = -0.854698
+anchor_top = 0.000581574
+anchor_right = -0.854698
+anchor_bottom = 0.151294
+offset_left = 108.758
+offset_top = -189.571
+offset_right = 183.758
+offset_bottom = 103.429
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 61
+text = "T
+h
+e
+y "
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Spaces/Space16"]
+anchors_preset = -1
+anchor_left = -0.854136
+anchor_top = -0.451557
+anchor_right = -0.854136
+anchor_bottom = -0.451557
+offset_left = 291.044
+offset_top = -74.714
+offset_right = 555.044
+offset_bottom = -3.71399
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 61
+text = "will"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="Spaces/Space16"]
+anchors_preset = -1
+anchor_left = -1.26162
+anchor_top = -0.150423
+anchor_right = -1.26162
+anchor_bottom = -0.150423
+offset_left = 862.329
+offset_top = -65.4281
+offset_right = 919.329
+offset_bottom = 153.572
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 61
+text = "n
+o
+t"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Label4" type="Label" parent="Spaces/Space16"]
+anchors_preset = -1
+anchor_left = -0.854136
+anchor_top = -0.451557
+anchor_right = -0.854136
+anchor_bottom = -0.451557
+offset_left = 194.615
+offset_top = 361.0
+offset_right = 458.615
+offset_bottom = 432.0
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 61
+text = "listen"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Space17" type="Sprite2D" parent="Spaces"]
+position = Vector2(733, 1128)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("23_540hr")
+
+[node name="Label2" type="Label" parent="Spaces/Space17"]
+anchors_preset = -1
+anchor_left = -0.853479
+anchor_top = -0.452236
+anchor_right = -0.853479
+anchor_bottom = -0.452236
+offset_left = 243.568
+offset_top = 355.381
+offset_right = 646.568
+offset_bottom = 426.381
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 61
+text = "forbidden"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Label4" type="Label" parent="Spaces/Space17"]
+anchors_preset = -1
+anchor_left = -0.854792
+anchor_top = -0.450878
+anchor_right = -0.854792
+anchor_bottom = -0.450878
+offset_left = 290.901
+offset_top = 14.7145
+offset_right = 600.901
+offset_bottom = 159.715
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 61
+text = "a thought"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Checkpoint4" type="Sprite2D" parent="Spaces"]
+position = Vector2(975, 1129)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("24_6ip5v")
+
+[node name="Label" type="Label" parent="Spaces/Checkpoint4"]
+anchors_preset = -1
+anchor_left = -0.535057
+anchor_top = -0.176944
+anchor_right = -0.535057
+anchor_bottom = -0.176944
+offset_left = 276.698
+offset_top = -94.7078
+offset_right = 666.698
+offset_bottom = -23.7078
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 61
+text = "they"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Spaces/Checkpoint4"]
+anchors_preset = -1
+anchor_left = -0.534317
+anchor_top = -0.178299
+anchor_right = -0.534317
+anchor_bottom = -0.178299
+offset_left = 218.698
+offset_top = -26.7079
+offset_right = 643.698
+offset_bottom = 74.2921
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 91
+text = "cannot"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="Spaces/Checkpoint4"]
+anchors_preset = -1
+anchor_left = -0.535057
+anchor_top = -0.176944
+anchor_right = -0.535057
+anchor_bottom = -0.176944
+offset_left = 281.698
+offset_top = 105.292
+offset_right = 671.698
+offset_bottom = 176.292
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 61
+text = "break us"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Space18" type="Sprite2D" parent="Spaces"]
+position = Vector2(1024, 1334)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("25_kq1c5")
+
+[node name="Label2" type="Label" parent="Spaces/Space18"]
+anchors_preset = -1
+anchor_left = -0.853479
+anchor_top = -0.452236
+anchor_right = -0.853479
+anchor_bottom = -0.452236
+offset_left = 324.549
+offset_top = 241.209
+offset_right = 610.549
+offset_bottom = 460.209
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 61
+text = "i dare to wonder"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Barrier" type="Sprite2D" parent="Spaces"]
+position = Vector2(751, 1579)
+rotation = -0.00872665
+scale = Vector2(0.592496, 1.36154)
+texture = ExtResource("26_ornx7")
+
+[node name="Space19" type="Sprite2D" parent="Spaces"]
+position = Vector2(1016, 1734)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("27_cnnru")
+
+[node name="Label2" type="Label" parent="Spaces/Space19"]
+anchors_preset = -1
+anchor_left = -0.853479
+anchor_top = -0.452236
+anchor_right = -0.853479
+anchor_bottom = -0.452236
+offset_left = 75.3568
+offset_top = -73.9532
+offset_right = 361.357
+offset_bottom = 219.047
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 61
+text = "we"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="Spaces/Space19"]
+anchors_preset = -1
+anchor_left = -0.853479
+anchor_top = -0.452236
+anchor_right = -0.853479
+anchor_bottom = -0.452236
+offset_left = 292.857
+offset_top = -73.9532
+offset_right = 578.857
+offset_bottom = 219.047
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 61
+text = "do"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Label4" type="Label" parent="Spaces/Space19"]
+anchors_preset = -1
+anchor_left = -1.46374
+anchor_top = -0.452236
+anchor_right = -1.46374
+anchor_bottom = -0.452236
+offset_left = 743.357
+offset_top = 31.0468
+offset_right = 791.357
+offset_bottom = 324.047
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 61
+text = "not"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Label5" type="Label" parent="Spaces/Space19"]
+anchors_preset = -1
+anchor_left = -1.46245
+anchor_top = -0.452236
+anchor_right = -1.46245
+anchor_bottom = -0.452236
+offset_left = 462.857
+offset_top = 303.547
+offset_right = 710.857
+offset_bottom = 374.547
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 61
+text = "want"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Label6" type="Label" parent="Spaces/Space19"]
+anchors_preset = -1
+anchor_left = -1.98938
+anchor_top = 0.210938
+anchor_right = -1.98938
+anchor_bottom = 0.210938
+offset_left = 570.857
+offset_top = -222.953
+offset_right = 612.857
+offset_bottom = 70.0467
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 61
+text = "your"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Label7" type="Label" parent="Spaces/Space19"]
+anchors_preset = -1
+anchor_left = -2.07784
+anchor_top = 0.209441
+anchor_right = -2.07784
+anchor_bottom = 0.209441
+offset_left = 663.357
+offset_top = -224.953
+offset_right = 973.357
+offset_bottom = -153.953
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 61
+text = "Light"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Space20" type="Sprite2D" parent="Spaces"]
+position = Vector2(819, 1733)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("28_540hr")
+
+[node name="Label2" type="Label" parent="Spaces/Space20"]
+anchors_preset = -1
+anchor_left = -0.853479
+anchor_top = -0.453329
+anchor_right = -0.853479
+anchor_bottom = -0.453
+offset_left = 172.857
+offset_top = 8.70496
+offset_right = 483.857
+offset_bottom = 227.576
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 91
+text = "run!!!"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Space21" type="Sprite2D" parent="Spaces"]
+position = Vector2(645, 1732)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("29_6ip5v")
+
+[node name="Label2" type="Label" parent="Spaces/Space21"]
+anchors_preset = -1
+anchor_left = -0.854494
+anchor_top = -0.223408
+anchor_right = -0.854494
+anchor_bottom = -0.223408
+offset_left = 149.168
+offset_top = 99.0046
+offset_right = 566.168
+offset_bottom = 408.005
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 71
+text = "beyond the city"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Space22" type="Sprite2D" parent="Spaces"]
+position = Vector2(469, 1802)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("30_q5dlx")
+
+[node name="Label2" type="Label" parent="Spaces/Space22"]
+anchors_preset = -1
+anchor_left = -0.854494
+anchor_top = -0.223408
+anchor_right = -0.854494
+anchor_bottom = -0.223408
+offset_left = 149.168
+offset_top = -243.852
+offset_right = 566.168
+offset_bottom = 65.1475
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 71
+text = "the world is"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="Spaces/Space22"]
+anchors_preset = -1
+anchor_left = -0.854494
+anchor_top = -0.223408
+anchor_right = -0.854494
+anchor_bottom = -0.223408
+offset_left = 140.597
+offset_top = -58.1382
+offset_right = 557.597
+offset_bottom = 250.862
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 121
+text = "mine"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Space23" type="Sprite2D" parent="Spaces"]
+position = Vector2(635, 1916)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("31_c4wnb")
+
+[node name="Label2" type="Label" parent="Spaces/Space23"]
+anchors_preset = -1
+anchor_left = -0.854494
+anchor_top = -0.223408
+anchor_right = -0.854494
+anchor_bottom = -0.223408
+offset_left = 159.422
+offset_top = -18.843
+offset_right = 576.422
+offset_bottom = 290.157
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 121
+text = "no"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="Spaces/Space23"]
+anchors_preset = -1
+anchor_left = -0.821579
+anchor_top = -0.222434
+anchor_right = -0.821579
+anchor_bottom = -0.222
+offset_left = 156.565
+offset_top = 97.8712
+offset_right = 547.565
+offset_bottom = 406.68
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 71
+text = "chains here"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Space24" type="Sprite2D" parent="Spaces"]
+position = Vector2(823, 1922)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("32_7plk7")
+
+[node name="Label2" type="Label" parent="Spaces/Space24"]
+anchors_preset = -1
+anchor_left = -0.854494
+anchor_top = -0.223408
+anchor_right = -0.854494
+anchor_bottom = -0.223408
+offset_left = 159.422
+offset_top = -84.557
+offset_right = 576.422
+offset_bottom = 224.443
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 121
+text = "i"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="Spaces/Space24"]
+anchors_preset = -1
+anchor_left = -0.821579
+anchor_top = -0.222434
+anchor_right = -0.821579
+anchor_bottom = -0.222
+offset_left = 162.279
+offset_top = 46.4429
+offset_right = 553.279
+offset_bottom = 355.252
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 71
+text = "choose"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Space25" type="Sprite2D" parent="Spaces"]
+position = Vector2(1024, 1964)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("33_fbwgr")
+
+[node name="Label3" type="Label" parent="Spaces/Space25"]
+anchors_preset = -1
+anchor_left = -0.821579
+anchor_top = -0.222434
+anchor_right = -0.821579
+anchor_bottom = -0.222
+offset_left = 137.203
+offset_top = -76.4142
+offset_right = 528.203
+offset_bottom = 340.395
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 71
+text = "my 
+
+ is my own"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Space26" type="Sprite2D" parent="Spaces"]
+position = Vector2(928.35, 2188.95)
+scale = Vector2(0.406651, 0.409266)
+texture = ExtResource("34_7mj2a")
+
+[node name="Label3" type="Label" parent="Spaces/Space26"]
+anchors_preset = -1
+anchor_left = -0.821579
+anchor_top = -0.222434
+anchor_right = -0.821579
+anchor_bottom = -0.222
+offset_left = 161.066
+offset_top = -75.6239
+offset_right = 552.066
+offset_bottom = 341.185
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_nr8wp")
+theme_override_font_sizes/font_size = 71
+text = "free
+
+
+
+at last"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
 metadata/_edit_use_anchors_ = true
 
 [node name="game_piece2" type="Sprite2D" parent="."]

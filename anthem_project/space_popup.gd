@@ -2,9 +2,9 @@ extends CanvasLayer
 
 signal action_pressed
 
-@onready var title_label = $PanelContainer/VBoxContainer/Label
-@onready var description_label = $PanelContainer/VBoxContainer/Label2
-@onready var action_button = $PanelContainer/VBoxContainer/Button
+@onready var title_label = $PanelContainer/MarginContainer/VBoxContainer/Label
+@onready var description_label = $PanelContainer/MarginContainer/VBoxContainer/Label2
+@onready var action_button = $PanelContainer/MarginContainer/VBoxContainer/Button
 
 func show_popup(title: String, description: String, action_text: String = ""):
 	print("title: ", title, " description: ", description) 
