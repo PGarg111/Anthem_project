@@ -69,7 +69,6 @@ base_font = ExtResource("4_4d7sh")
 variation_embolden = 0.6
 
 [node name="Node2D" type="Node2D" node_paths=PackedStringArray("game_spaces")]
-position = Vector2(1, 0)
 script = ExtResource("1_0e48y")
 game_spaces = [NodePath("Start"), NodePath("SpotOne"), NodePath("SpotTwo"), NodePath("SpotThree"), NodePath("SpotFour"), NodePath("SpotFive"), NodePath("SpotSix"), NodePath("SpotSeven"), NodePath("SpotEight"), NodePath("SpotNine"), NodePath("SpotTen"), NodePath("Spot11"), NodePath("Spot12"), NodePath("Spot13"), NodePath("Spot14"), NodePath("Spot15"), NodePath("Spot16"), NodePath("Spot17"), NodePath("Spot18"), NodePath("Spot19"), NodePath("Spot20"), NodePath("Spot21"), NodePath("Spot22"), NodePath("Spot23"), NodePath("Spot24"), NodePath("Spot25"), NodePath("Spot26"), NodePath("Spot27"), NodePath("Spot28"), NodePath("Spot29"), NodePath("Spot30")]
 
@@ -85,7 +84,7 @@ anchor_mode = 0
 limit_left = 360
 limit_top = -50
 limit_right = 1152
-limit_bottom = 870
+limit_bottom = 2350
 position_smoothing_enabled = true
 editor_draw_limits = true
 

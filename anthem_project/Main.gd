@@ -10,6 +10,7 @@ extends Node2D
 @onready var camera : Camera2D = $Camera2D
 var lose_turn = {1: false, 2: false, 3: false}
 var is_trapped = {1: false, 2: false, 3: false}
+var forced_stop_indicies : Array[int] = []
 var barrier_space_index : int = -1
 
 func _process(_delta):
@@ -57,12 +58,17 @@ func _ready():
 	await get_tree().process_frame
 	camera.position = game_piece.position
 	for i in range(game_spaces.size()):
-		if game_spaces[i].name == "Spot22":
+		var node_name = game_spaces[i].name
+		if node_name == "Spot22":
 			barrier_space_index = i
-			print("Barrier found at index: ", i)
-			break
+			forced_stop_indicies.append(i)
+		if node_name == "Spot11" or node_name == "Spot13" or node_name == "Spot17" or node_name == "Spot20":
+			forced_stop_indicies.append(i)
+	forced_stop_indicies.sort()
+			
 
 func _on_roll_done(steps: int):
+	print("--- NEW ROLL ---")
 	if not dice_enabled:
 		print("dice disabled, ignoring roll")
 		return
@@ -73,75 +79,92 @@ func _on_roll_done(steps: int):
 		await get_tree().create_timer(2.0).timeout
 		advance_turn()
 		return
-	
+		
+	print("Current Player: ", current_player_moving)
 	var current_pos = 0
+	
 	if current_player_moving == 1:
 		current_pos = place
 	elif current_player_moving == 2:
 		current_pos = place2
 	else:
 		current_pos = place3
-		
+	print("Current Position Index: ", current_pos)
+	print("Barrier Index: ", barrier_space_index)
+	print("Is Trapped? ", is_trapped[current_player_moving])
+	
 	if is_trapped[current_player_moving] and current_pos == barrier_space_index:
+		print("Logic: Player is confirmed TRAPPED at the barrier")
 		if steps == 4 or steps == 6:
 			sidebar.set_status("Rolled a " + str(steps) + "! You broke free!")
 			is_trapped[current_player_moving] = false
-			dice_enabled = false
-			move_player(current_player_moving, steps)
-	else:
-		sidebar.set_status("Rolled a " + str(steps) + ". Still trapped...")
-		await get_tree().create_timer(1.5).timeout
-		advance_turn()
+	
+		else:
+			sidebar.set_status("Rolled a " + str(steps) + ". Still trapped...")
+			await get_tree().create_timer(1.5).timeout
+			advance_turn()
+			return
+	
+	print("Logic: Player is NOT trapped. Moving normally")
 		
 	dice_enabled = false
 	print("rolled: ", steps)
 	sidebar.set_status("Rolled a " + str(steps) + "! Moving...")
-	if current_player_moving == 1:
-		move_player(1, steps)
-
-	elif current_player_moving == 2:
-		move_player(2, steps)
-		
-	elif current_player_moving == 3:
-		move_player(3, steps)
+	move_player(current_player_moving, steps)
+	#if current_player_moving == 1:
+		#move_player(1, steps)
+#
+	#elif current_player_moving == 2:
+		#move_player(2, steps)
+		#
+	#elif current_player_moving == 3:
+		#move_player(3, steps)
 		
 func move_player(player: int, steps: int):
 	last_player_moved = player
 	current_player_moving = player
 	
-	#var current_place = place if player == 1 else (place2 if player == 2 else place3)
-	#var piece = game_piece if player == 1 else (game_piece2 if player == 2 else game_piece3)
-	var current_place = 0
-	var piece : Sprite2D
+	var current_place = place if player == 1 else (place2 if player == 2 else place3)
+	var piece = game_piece if player == 1 else (game_piece2 if player == 2 else game_piece3)
+
 	
-	if player == 1:
-		current_place = place
-		piece = game_piece
-	elif player == 2:
-		current_place = place2
-		piece = game_piece2
-	else:
-		current_place = place3
-		piece = game_piece3
+	var desired_target = current_place + steps
+	var actual_target = desired_target
 	
-	var target_place = clamp(current_place + steps, 0, number_of_spaces - 1)
-	last_landed_index = target_place
+	for stop_index in forced_stop_indicies:
+		if current_place < stop_index and desired_target >= stop_index:
+			actual_target = stop_index
+			break
+			
+	actual_target = clamp(actual_target, 0, number_of_spaces - 1)
+	last_landed_index = actual_target
 	
+	#if current_place < barrier_space_index and desired_target >= barrier_space_index:
+		#print("Forced stop: Barrier encountered")
+		#actual_target = barrier_space_index
+	#for cp_index in checkpoint_indicies:
+		#if current_place < cp_index and desired_target >= cp_index:
+			#if cp_index < actual_target:
+				#print("Forced stop: Checkpoint encountered at ", cp_index)
+				#actual_target = cp_index
 	var tween = create_tween()
-	for i in range(1, (target_place - current_place) + 1):
-		var next_step_index = current_place + i
-		#var next = clamp(current_place + i, 0, number_of_spaces - 1)
-		tween.tween_property(piece, "position", game_spaces[next_step_index].position, 1)
-		
-	tween.finished.connect(func(): show_space_popup(target_place), CONNECT_ONE_SHOT)
+	var move_range = actual_target - current_place
+	print("Moving from ", current_place, " to ", actual_target, " (Steps: ", move_range, ")")
 	
+	for i in range(1, move_range + 1):
+		var next_idx= current_place + i
+		tween.tween_property(piece, "position", game_spaces[next_idx].position, 0.5)
+	
+	tween.finished.connect(func(): show_space_popup(actual_target), CONNECT_ONE_SHOT)
+	var target_place = clamp(current_place + steps, 0, number_of_spaces - 1)
+	#last_landed_index = target_place
 	
 	if player == 1:
-		place = target_place
+		place = actual_target
 	elif player == 2:
-		place2 = target_place
+		place2 = actual_target
 	else:
-		place3 = target_place
+		place3 = actual_target
 		
 func advance_turn():
 	if current_player_moving == 1:
@@ -156,12 +179,13 @@ func advance_turn():
 	dice_enabled = true
 		
 func show_space_popup(space_index: int):
+	var spot_name = game_spaces[space_index].name
 	if space_index == barrier_space_index:
-		sidebar.set_status("You hit a barrier: The Coucil of Scholars")
+		sidebar.set_status("Stopped by The Council of Scholars")
 		is_trapped[current_player_moving] = true
 		popup.show_popup("The Council of Scholars", "You must roll a 4 or 6 to pass them.", "Understood")
 		return
-	var spot_name = game_spaces[space_index].name
+	
 	if space_data.has(spot_name):
 		var data = space_data[spot_name]
 		sidebar.set_status("You landed on an event space!")

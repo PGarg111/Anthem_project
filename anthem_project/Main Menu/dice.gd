@@ -22,19 +22,22 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 		
 func _roll_dice():
 		var duration: = 1.0
-		
 		isRolling = true
 		
 		while duration > 0:
 			var newIndex = faces.get_children().pick_random().get_index()
 			faces.get_child(currentIndex).hide()
 			faces.get_child(newIndex).show()
+			currentIndex = newIndex
 			
 			await get_tree().create_timer(0.1).timeout
-			
-			currentIndex = newIndex
 			duration -= 0.1
 			
 		isRolling = false
-		
-		roll_done.emit(currentIndex+1)
+		var final_value = 0
+		for i in range(faces.get_child_count()):
+			if faces.get_child(i).visible:
+				final_value = i + 1
+				break
+		print("Dice Logic Result: ", final_value)
+		roll_done.emit(final_value)
