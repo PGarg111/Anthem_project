@@ -1,9 +1,9 @@
 extends PanelContainer
 
 
-@onready var turn_label = $VBoxContainer/Label2
-@onready var instruction_label = $VBoxContainer/Label3
-@onready var status_label = $VBoxContainer/Label4
+@onready var turn_label = $MarginContainer/VBoxContainer/Label2
+@onready var instruction_label = $MarginContainer/VBoxContainer/Label3
+@onready var status_label = $MarginContainer/VBoxContainer/Label4
 
 func _ready():
 	instruction_label.text = """HOW TO PLAY

@@ -1,0 +1,142 @@
+[gd_scene load_steps=12 format=3 uid="uid://d2xyi3rm1t0ux"]
+
+[ext_resource type="FontFile" uid="uid://dqpwiaq7lkab7" path="res://Assests/CinzelDecorative-Black.ttf" id="1_7678y"]
+[ext_resource type="FontFile" uid="uid://b4f6wbb36mjp6" path="res://Assests/JosefinSans-VariableFont_wght.ttf" id="2_fp1em"]
+[ext_resource type="FontFile" uid="uid://wfavt178s5xk" path="res://Assests/CinzelDecorative-Bold.ttf" id="3_6gx7d"]
+[ext_resource type="FontFile" uid="uid://dn1ia1w7hcdbo" path="res://Assests/Lato-Regular.ttf" id="4_bhfh8"]
+[ext_resource type="Script" uid="uid://c5y2bdnp3isnb" path="res://final.gd" id="5_fp1em"]
+
+[sub_resource type="Gradient" id="Gradient_b2o8g"]
+colors = PackedColorArray(0.227451, 0.180392, 0.117647, 1, 0.054902, 0.0470588, 0.0392157, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7ijlv"]
+gradient = SubResource("Gradient_b2o8g")
+width = 1152
+height = 648
+fill = 1
+fill_from = Vector2(0.50625, 0.1)
+
+[sub_resource type="FontVariation" id="FontVariation_awkn3"]
+base_font = ExtResource("2_fp1em")
+variation_embolden = 2.0
+spacing_glyph = 4
+
+[sub_resource type="FontVariation" id="FontVariation_iquii"]
+base_font = ExtResource("3_6gx7d")
+variation_embolden = 0.25
+spacing_glyph = 3
+spacing_space = 3
+spacing_top = 7
+spacing_bottom = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xethn"]
+bg_color = Color(0.117647, 0.101961, 0.0784314, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.360784, 0.270588, 0.0627451, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i6nld"]
+bg_color = Color(0.117647, 0.101961, 0.0784314, 1)
+border_color = Color(0.360784, 0.270588, 0.0627451, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="Final" type="CanvasLayer"]
+script = ExtResource("5_fp1em")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_7ijlv")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+offset_right = 1150.0
+offset_bottom = 133.0
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = ExtResource("1_7678y")
+theme_override_font_sizes/font_size = 98
+text = "You escaped!"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 3.0
+offset_top = 113.0
+offset_right = 1153.0
+offset_bottom = 179.0
+theme_override_colors/font_color = Color(0.542444, 0.403033, 0.0191686, 1)
+theme_override_fonts/font = SubResource("FontVariation_awkn3")
+theme_override_font_sizes/font_size = 19
+text = "You successfully escaped the collectivist and created your own individual society"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 431.0
+offset_top = 337.0
+offset_right = 728.0
+offset_bottom = 413.0
+theme_override_colors/font_hover_color = Color(0.960784, 0.815686, 0.376471, 1)
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_iquii")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/hover = SubResource("StyleBoxFlat_xethn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_i6nld")
+text = "Start"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 432.0
+offset_top = 427.0
+offset_right = 729.0
+offset_bottom = 503.0
+theme_override_colors/font_hover_color = Color(0.960784, 0.815686, 0.376471, 1)
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_iquii")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/hover = SubResource("StyleBoxFlat_xethn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_i6nld")
+text = "Exit"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 9.0
+offset_top = 626.0
+offset_right = 1155.0
+offset_bottom = 643.0
+theme_override_colors/font_color = Color(0.364116, 0.327656, 0.273026, 1)
+theme_override_fonts/font = ExtResource("4_bhfh8")
+theme_override_font_sizes/font_size = 14
+text = "Based on the book Anthem by Ayn Rand"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Player1Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Player2Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Player3Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+metadata/_edit_use_anchors_ = true

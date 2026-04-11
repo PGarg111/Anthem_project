@@ -6,11 +6,11 @@
 [ext_resource type="Script" uid="uid://dyxrmlj6uba14" path="res://Main Menu/instructions.gd" id="4_n5yvu"]
 [ext_resource type="FontFile" uid="uid://dn1ia1w7hcdbo" path="res://Assests/Lato-Regular.ttf" id="5_r2hpd"]
 
-[sub_resource type="Gradient" id="Gradient_b2o8g"]
+[sub_resource type="Gradient" id="Gradient_r2hpd"]
 colors = PackedColorArray(0.227451, 0.180392, 0.117647, 1, 0.054902, 0.0470588, 0.0392157, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_ig7tw"]
-gradient = SubResource("Gradient_b2o8g")
+gradient = SubResource("Gradient_r2hpd")
 width = 1152
 height = 648
 fill = 1

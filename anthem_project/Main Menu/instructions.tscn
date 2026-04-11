@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://bsloy1q384ivn"]
 
-[ext_resource type="FontFile" uid="uid://dn1ia1w7hcdbo" path="res://Assests/Lato-Regular.ttf" id="1_we5vv"]
+[ext_resource type="FontFile" uid="uid://dqpwiaq7lkab7" path="res://Assests/CinzelDecorative-Black.ttf" id="1_a0cjb"]
 [ext_resource type="FontFile" uid="uid://wfavt178s5xk" path="res://Assests/CinzelDecorative-Bold.ttf" id="2_a0cjb"]
 [ext_resource type="Script" uid="uid://dbal7dxflallp" path="res://Main Menu/button.gd" id="3_a0cjb"]
 
@@ -60,29 +60,23 @@ offset_top = 150.0
 offset_right = 1024.0
 offset_bottom = 183.0
 theme_override_colors/font_color = Color(0.960784, 0.815686, 0.376471, 1)
-theme_override_fonts/font = ExtResource("1_we5vv")
-theme_override_font_sizes/font_size = 27
-text = "Player 1 - Press the \"1\" on the keyboard to move forward when it is your turn"
-
-[node name="Label" type="Label" parent="CanvasLayer"]
-offset_left = 129.0
-offset_top = 186.0
-offset_right = 1024.0
-offset_bottom = 219.0
-theme_override_colors/font_color = Color(0.960784, 0.815686, 0.376471, 1)
-theme_override_fonts/font = ExtResource("1_we5vv")
-theme_override_font_sizes/font_size = 27
-text = "Player 2 - Press the \"2\" on the keyboard to move forward when it is your turn"
+theme_override_fonts/font = ExtResource("1_a0cjb")
+theme_override_font_sizes/font_size = 17
+text = "Player 1 will press the space bar first to roll the dice
+Player 2 will press the space bar second to roll the dice
+Player 3 will press the space bar after both player 1 and player 2 for their turn
+"
 
 [node name="Label3" type="Label" parent="CanvasLayer"]
 offset_left = 126.0
-offset_top = 235.0
+offset_top = 261.0
 offset_right = 1025.0
-offset_bottom = 362.0
+offset_bottom = 393.0
 theme_override_colors/font_color = Color(0.960784, 0.815686, 0.376471, 1)
-theme_override_fonts/font = ExtResource("1_we5vv")
-theme_override_font_sizes/font_size = 28
-text = "Click on the button on the space to learn about that space. Some spaces have actions to be completed. These actions will complete themselves by clicking on the button in the popup."
+theme_override_fonts/font = ExtResource("1_a0cjb")
+theme_override_font_sizes/font_size = 17
+text = "If you landed on an event space (Actions, Checkpoints, the barrier) there will a popup that appears with information and a button that has an action. To complete that action click on the button and it will automatically complete.
+The action button will say what the action is. For example, move forard 2 spaces, move backward 1 space, or loose a turn. "
 autowrap_mode = 3
 
 [node name="Button2" type="Button" parent="CanvasLayer"]

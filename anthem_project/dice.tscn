@@ -17,13 +17,13 @@ position = Vector2(123, 120)
 scale = Vector2(7, 7)
 texture = ExtResource("1_ju2fo")
 region_enabled = true
-region_rect = Rect2(0, 0, 16.0693, 16)
+region_rect = Rect2(0.06814, 0.170008, 16.2481, 15.9934)
 
 [node name="2" type="Sprite2D" parent="faces"]
 scale = Vector2(7, 7)
 texture = ExtResource("1_ju2fo")
 region_enabled = true
-region_rect = Rect2(0, 0, 16.0693, 16)
+region_rect = Rect2(16.0782, 0.0782318, 15.9852, 16.0454)
 
 [node name="3" type="Sprite2D" parent="faces"]
 scale = Vector2(7, 7)

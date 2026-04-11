@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://cvgejy3gkk04y"]
+[gd_scene load_steps=55 format=3 uid="uid://cvgejy3gkk04y"]
 
 [ext_resource type="Script" uid="uid://bit36b8ojp3gd" path="res://Main.gd" id="1_0e48y"]
 [ext_resource type="Texture2D" uid="uid://c60wfvwhb32ho" path="res://images/Untitled_design__10_-removebg-preview.png" id="2_0hol4"]
@@ -42,6 +42,8 @@
 [ext_resource type="Texture2D" uid="uid://dncxett2kl3vm" path="res://images/Screenshot_2026-04-07_at_8.51.21_PM-removebg-preview.png" id="32_7plk7"]
 [ext_resource type="Texture2D" uid="uid://fjcqcsdouv6j" path="res://images/Screenshot_2026-04-07_at_8.54.23_PM-removebg-preview.png" id="33_fbwgr"]
 [ext_resource type="Texture2D" uid="uid://c66sfceksg2x1" path="res://images/Screenshot_2026-04-07_at_8.56.03_PM-removebg-preview.png" id="34_7mj2a"]
+[ext_resource type="FontFile" uid="uid://wfavt178s5xk" path="res://Assests/CinzelDecorative-Bold.ttf" id="44_lbrxf"]
+[ext_resource type="Script" uid="uid://c5y2bdnp3isnb" path="res://final.gd" id="44_xjt7e"]
 
 [sub_resource type="FontVariation" id="FontVariation_nr8wp"]
 base_font = ExtResource("4_4d7sh")
@@ -67,6 +69,49 @@ variation_embolden = 1.32
 [sub_resource type="FontVariation" id="FontVariation_hqns4"]
 base_font = ExtResource("4_4d7sh")
 variation_embolden = 0.6
+
+[sub_resource type="Gradient" id="Gradient_b2o8g"]
+colors = PackedColorArray(0.227451, 0.180392, 0.117647, 1, 0.054902, 0.0470588, 0.0392157, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xjt7e"]
+gradient = SubResource("Gradient_b2o8g")
+width = 1152
+height = 648
+fill = 1
+fill_from = Vector2(0.50625, 0.1)
+
+[sub_resource type="FontVariation" id="FontVariation_0xo8l"]
+base_font = ExtResource("4_4d7sh")
+variation_embolden = 2.0
+spacing_glyph = 4
+
+[sub_resource type="FontVariation" id="FontVariation_xfyss"]
+base_font = ExtResource("44_lbrxf")
+variation_embolden = 0.25
+spacing_glyph = 3
+spacing_space = 3
+spacing_top = 7
+spacing_bottom = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ngjr"]
+bg_color = Color(0.117647, 0.101961, 0.0784314, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.360784, 0.270588, 0.0627451, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qilgh"]
+bg_color = Color(0.117647, 0.101961, 0.0784314, 1)
+border_color = Color(0.360784, 0.270588, 0.0627451, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [node name="Node2D" type="Node2D" node_paths=PackedStringArray("game_spaces")]
 script = ExtResource("1_0e48y")
@@ -1417,11 +1462,18 @@ mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_rj586")
 script = ExtResource("2_rj586")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/SidebarLayer/PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/SidebarLayer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/SidebarLayer/PanelContainer/MarginContainer"]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/SidebarLayer/PanelContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="CanvasLayer/SidebarLayer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
 theme_override_fonts/font = ExtResource("3_4d7sh")
@@ -1429,23 +1481,23 @@ theme_override_font_sizes/font_size = 32
 text = "Anthem"
 horizontal_alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="CanvasLayer/SidebarLayer/PanelContainer/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/SidebarLayer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label2" type="Label" parent="CanvasLayer/SidebarLayer/PanelContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.960784, 0.815686, 0.376471, 1)
-theme_override_fonts/font = SubResource("FontVariation_ir8iy")
-
-[node name="Label4" type="Label" parent="CanvasLayer/SidebarLayer/PanelContainer/VBoxContainer"]
+[node name="Label2" type="Label" parent="CanvasLayer/SidebarLayer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.960784, 0.815686, 0.376471, 1)
 theme_override_fonts/font = SubResource("FontVariation_ir8iy")
 
-[node name="HSeparator2" type="HSeparator" parent="CanvasLayer/SidebarLayer/PanelContainer/VBoxContainer"]
+[node name="Label4" type="Label" parent="CanvasLayer/SidebarLayer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.960784, 0.815686, 0.376471, 1)
+theme_override_fonts/font = SubResource("FontVariation_ir8iy")
+
+[node name="HSeparator2" type="HSeparator" parent="CanvasLayer/SidebarLayer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label3" type="Label" parent="CanvasLayer/SidebarLayer/PanelContainer/VBoxContainer"]
+[node name="Label3" type="Label" parent="CanvasLayer/SidebarLayer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.960784, 0.815686, 0.376471, 1)
 theme_override_fonts/font = SubResource("FontVariation_hqns4")
@@ -1454,7 +1506,7 @@ theme_override_fonts/font = SubResource("FontVariation_hqns4")
 layer = 3
 
 [node name="Dice" parent="CanvasLayer/DiceLayer" instance=ExtResource("5_d21ai")]
-position = Vector2(-49, 453)
+position = Vector2(149, 458)
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 visible = false
@@ -1474,3 +1526,96 @@ texture = ExtResource("2_0hol4")
 
 [node name="SpacePopup" parent="." instance=ExtResource("5_q6r6c")]
 visible = false
+
+[node name="Final" type="CanvasLayer" parent="."]
+visible = false
+script = ExtResource("44_xjt7e")
+
+[node name="TextureRect" type="TextureRect" parent="Final"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_xjt7e")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Final"]
+offset_right = 1150.0
+offset_bottom = 133.0
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = ExtResource("3_4d7sh")
+theme_override_font_sizes/font_size = 98
+text = "You escaped!"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Final"]
+offset_left = 3.0
+offset_top = 113.0
+offset_right = 1153.0
+offset_bottom = 179.0
+theme_override_colors/font_color = Color(0.542444, 0.403033, 0.0191686, 1)
+theme_override_fonts/font = SubResource("FontVariation_0xo8l")
+theme_override_font_sizes/font_size = 19
+text = "You successfully escaped the collectivist and created your own individual society"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Button3" type="Button" parent="Final"]
+offset_left = 404.0
+offset_top = 491.0
+offset_right = 701.0
+offset_bottom = 567.0
+theme_override_colors/font_hover_color = Color(0.960784, 0.815686, 0.376471, 1)
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
+theme_override_fonts/font = SubResource("FontVariation_xfyss")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/hover = SubResource("StyleBoxFlat_3ngjr")
+theme_override_styles/normal = SubResource("StyleBoxFlat_qilgh")
+text = "Exit"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="Final"]
+offset_left = 9.0
+offset_top = 626.0
+offset_right = 1155.0
+offset_bottom = 643.0
+theme_override_colors/font_color = Color(0.364116, 0.327656, 0.273026, 1)
+theme_override_fonts/font = ExtResource("4_ir8iy")
+theme_override_font_sizes/font_size = 14
+text = "Based on the book Anthem by Ayn Rand"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Player1Label" type="Label" parent="Final"]
+anchors_preset = -1
+offset_left = 454.0
+offset_top = 219.0
+offset_right = 714.0
+offset_bottom = 298.0
+theme_override_fonts/font = ExtResource("3_4d7sh")
+metadata/_edit_use_anchors_ = true
+
+[node name="Player2Label" type="Label" parent="Final"]
+anchors_preset = -1
+offset_left = 455.0
+offset_top = 313.0
+offset_right = 715.0
+offset_bottom = 392.0
+theme_override_fonts/font = ExtResource("3_4d7sh")
+metadata/_edit_use_anchors_ = true
+
+[node name="Player3Label" type="Label" parent="Final"]
+anchors_preset = -1
+offset_left = 455.0
+offset_top = 384.0
+offset_right = 715.0
+offset_bottom = 463.0
+theme_override_fonts/font = ExtResource("3_4d7sh")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Final/Button3" to="Final" method="_on_RestartButton_pressed"]
