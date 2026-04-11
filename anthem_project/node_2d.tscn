@@ -1593,10 +1593,11 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Player1Label" type="Label" parent="Final"]
 anchors_preset = -1
-offset_left = 454.0
-offset_top = 219.0
-offset_right = 714.0
-offset_bottom = 298.0
+offset_left = 456.0
+offset_top = 232.0
+offset_right = 716.0
+offset_bottom = 311.0
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
 theme_override_fonts/font = ExtResource("3_4d7sh")
 metadata/_edit_use_anchors_ = true
 
@@ -1606,6 +1607,7 @@ offset_left = 455.0
 offset_top = 313.0
 offset_right = 715.0
 offset_bottom = 392.0
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
 theme_override_fonts/font = ExtResource("3_4d7sh")
 metadata/_edit_use_anchors_ = true
 
@@ -1615,6 +1617,7 @@ offset_left = 455.0
 offset_top = 384.0
 offset_right = 715.0
 offset_bottom = 463.0
+theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
 theme_override_fonts/font = ExtResource("3_4d7sh")
 metadata/_edit_use_anchors_ = true
 
