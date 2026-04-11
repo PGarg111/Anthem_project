@@ -8,16 +8,17 @@ extends PanelContainer
 func _ready():
 	instruction_label.text = """HOW TO PLAY
 	
-	1. Press '1' to move Player 1
-	   Press '2' to move Player 2
+	1. Press space bar first to move Player 1
+	   Press space bar second to move Player 2
+	   Press space bar third to move Player 3
 	
-	2. Players take turns moving forwrad one space at a time
+	2. Players take turns moving forwrad one space at a time by rolling the dice
 	
 	3. Land on a space to reveal its event. Read carefully!
 	
 	4. Some spaces have actions that move you backwards. Press the action button when it appears.
 	
-	5. First player to reach the end wins!
+	5. Will you be the fastest to escape collectivism?
 	
 	Checkpoints are spaces that say 'Checkpoint' on them. 
 	These spaces have more information and are important events.
