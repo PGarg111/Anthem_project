@@ -23,6 +23,11 @@ func _ready():
 	Checkpoints are spaces that say 'Checkpoint' on them. 
 	These spaces have more information and are important events.
 	
+	Game Pieces
+	Player 1: The light bulb represents Equality
+	Player 2: The wheat represents Liberty
+	Player 3: The anchor represents International
+	
 	"""
 	instruction_label.autowrap_mode = TextServer.AUTOWRAP_WORD
 	

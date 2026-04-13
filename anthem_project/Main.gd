@@ -11,7 +11,7 @@ extends Node2D
 var lose_turn = {1: false, 2: false, 3: false}
 var is_trapped = {1: false, 2: false, 3: false}
 var forced_stop_indicies : Array[int] = []
-var barrier_space_index : int = -1
+var barrier_space_index = -1
 var start_time : Dictionary = {1: 0.0, 2: 0.0, 3: 0.0}
 var finish_time : Dictionary = {1: 0.0, 2: 0.0, 3: 0.0}
 var finished_players : Array = []
@@ -26,14 +26,14 @@ func _process(_delta):
 		target_piece = game_piece3
 	camera.position = camera.position.lerp(target_piece.position, 0.1)
 
-var last_landed_index : int = 0
-var place : int = 0
-var place2 : int = 0
-var place3 : int = 0
-var current_player_moving : int = 1
-var last_player_moved : int = 1
+var last_landed_index = 0
+var place = 0
+var place2 = 0
+var place3 = 0
+var current_player_moving = 1
+var last_player_moved = 1
 var number_of_spaces : int
-var dice_enabled : bool = true
+var dice_enabled = true
 
 var space_data = {
 	"SpotTwo": {"title": "Assigned, Not Chosen", "description": "The council has decided your fate before you could even dream of choosing it yourself, pushing you further from who you truly are.", "action": "Move Backward 1 Space", "move": -1},
@@ -149,8 +149,8 @@ func move_player(player: int, steps: int):
 			path.append(current_place + i)
 	if path.size() > 0:
 		var tween = create_tween()
-		for next_idx in path:
-			tween.tween_property(piece, "position", game_spaces[next_idx].position, 0.4)
+		for next_index in path:
+			tween.tween_property(piece, "position", game_spaces[next_index].position, 0.4)
 		tween.finished.connect(func():
 			if player == 1:
 				place = actual_target

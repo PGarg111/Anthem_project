@@ -1,8 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://bsloy1q384ivn"]
+[gd_scene load_steps=12 format=3 uid="uid://bsloy1q384ivn"]
 
 [ext_resource type="FontFile" uid="uid://dqpwiaq7lkab7" path="res://Assests/CinzelDecorative-Black.ttf" id="1_a0cjb"]
 [ext_resource type="FontFile" uid="uid://wfavt178s5xk" path="res://Assests/CinzelDecorative-Bold.ttf" id="2_a0cjb"]
 [ext_resource type="Script" uid="uid://dbal7dxflallp" path="res://Main Menu/button.gd" id="3_a0cjb"]
+[ext_resource type="Texture2D" uid="uid://bpssifu2mail7" path="res://bulb-removebg-preview.png" id="4_fvygg"]
+[ext_resource type="Texture2D" uid="uid://kef0jeavyce5" path="res://wheat-removebg-preview.png" id="5_282ry"]
+[ext_resource type="Texture2D" uid="uid://b3ccmgj43qk4d" path="res://anchor-removebg-preview.png" id="6_livf6"]
 
 [sub_resource type="Gradient" id="Gradient_7dm0k"]
 colors = PackedColorArray(0.227451, 0.180392, 0.117647, 1, 0.054902, 0.0470588, 0.0392157, 1)
@@ -55,10 +58,10 @@ texture = SubResource("GradientTexture2D_iaf26")
 metadata/_edit_use_anchors_ = true
 
 [node name="Label2" type="Label" parent="CanvasLayer"]
-offset_left = 129.0
-offset_top = 150.0
-offset_right = 1024.0
-offset_bottom = 183.0
+offset_left = 128.0
+offset_top = 28.0
+offset_right = 1023.0
+offset_bottom = 133.0
 theme_override_colors/font_color = Color(0.960784, 0.815686, 0.376471, 1)
 theme_override_fonts/font = ExtResource("1_a0cjb")
 theme_override_font_sizes/font_size = 17
@@ -68,10 +71,10 @@ Player 3 will press the space bar after both player 1 and player 2 for their tur
 "
 
 [node name="Label3" type="Label" parent="CanvasLayer"]
-offset_left = 126.0
-offset_top = 261.0
-offset_right = 1025.0
-offset_bottom = 393.0
+offset_left = 125.0
+offset_top = 139.0
+offset_right = 1024.0
+offset_bottom = 271.0
 theme_override_colors/font_color = Color(0.960784, 0.815686, 0.376471, 1)
 theme_override_fonts/font = ExtResource("1_a0cjb")
 theme_override_font_sizes/font_size = 17
@@ -92,5 +95,54 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_fvygg")
 theme_override_styles/normal = SubResource("StyleBoxFlat_282ry")
 text = "Return to Main Menu"
 script = ExtResource("3_a0cjb")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(220.5, 344.5)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("4_fvygg")
+
+[node name="Label2" type="Label" parent="CanvasLayer/Sprite2D"]
+offset_left = -500.0
+offset_top = 224.0
+offset_right = 522.0
+offset_bottom = 288.0
+theme_override_colors/font_color = Color(0.960784, 0.815686, 0.376471, 1)
+theme_override_fonts/font = ExtResource("1_a0cjb")
+theme_override_font_sizes/font_size = 47
+text = "The light bulb represents Equality "
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(555.5, 346.5)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("5_282ry")
+
+[node name="Label2" type="Label" parent="CanvasLayer/Sprite2D2"]
+offset_left = -428.0
+offset_top = 244.0
+offset_right = 417.0
+offset_bottom = 308.0
+theme_override_colors/font_color = Color(0.960784, 0.815686, 0.376471, 1)
+theme_override_fonts/font = ExtResource("1_a0cjb")
+theme_override_font_sizes/font_size = 47
+text = "The wheat represents Liberty "
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D3" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(877.5, 354.5)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("6_livf6")
+
+[node name="Label2" type="Label" parent="CanvasLayer/Sprite2D3"]
+anchors_preset = -1
+offset_left = -510.0
+offset_top = 226.0
+offset_right = 598.0
+offset_bottom = 290.0
+theme_override_colors/font_color = Color(0.960784, 0.815686, 0.376471, 1)
+theme_override_fonts/font = ExtResource("1_a0cjb")
+theme_override_font_sizes/font_size = 47
+text = "The anchor represent International "
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="CanvasLayer/Button2" to="CanvasLayer/Button2" method="_on_pressed"]
