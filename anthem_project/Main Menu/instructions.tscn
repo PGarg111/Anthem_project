@@ -134,7 +134,6 @@ scale = Vector2(0.25, 0.25)
 texture = ExtResource("6_livf6")
 
 [node name="Label2" type="Label" parent="CanvasLayer/Sprite2D3"]
-anchors_preset = -1
 offset_left = -510.0
 offset_top = 226.0
 offset_right = 598.0

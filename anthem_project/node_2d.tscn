@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://cvgejy3gkk04y"]
+[gd_scene load_steps=61 format=3 uid="uid://cvgejy3gkk04y"]
 
 [ext_resource type="Script" uid="uid://bit36b8ojp3gd" path="res://Main.gd" id="1_0e48y"]
 [ext_resource type="Texture2D" uid="uid://c60wfvwhb32ho" path="res://images/Untitled_design__10_-removebg-preview.png" id="2_0hol4"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://de2ot5ijad8fp" path="res://dice.tscn" id="5_d21ai"]
 [ext_resource type="PackedScene" uid="uid://dago4rjwdn8c4" path="res://space_popup.tscn" id="5_q6r6c"]
 [ext_resource type="Texture2D" uid="uid://mbrbnh0ycg51" path="res://Image from iOS (1).jpg" id="6_qilgh"]
+[ext_resource type="Texture2D" uid="uid://dsvxwqghfak1v" path="res://Screenshot 2026-04-13 165811.png" id="7_4qosj"]
 [ext_resource type="Texture2D" uid="uid://lbcronxce0kr" path="res://images/Screenshot_2026-04-06_at_5.43.54_PM-removebg-preview.png" id="8_k73cj"]
 [ext_resource type="Texture2D" uid="uid://dsmi6pdcdec56" path="res://images/Screenshot_2026-04-06_at_5.22.32_PM-removebg-preview.png" id="9_d2bti"]
 [ext_resource type="Texture2D" uid="uid://ci3wf25y7xwhl" path="res://images/Screenshot_2026-04-06_at_5.48.02_PM-removebg-preview.png" id="9_rjqkl"]
@@ -32,6 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://bcabwyc7m1prt" path="res://images/Screenshot_2026-04-07_at_4.42.00_PM-removebg-preview.png" id="21_ornx7"]
 [ext_resource type="Texture2D" uid="uid://cjdjvrjo6wxvp" path="res://images/Screenshot_2026-04-07_at_4.47.02_PM-removebg-preview.png" id="22_cnnru"]
 [ext_resource type="Texture2D" uid="uid://brcs6dtdofcbo" path="res://images/Screenshot_2026-04-07_at_4.50.49_PM-removebg-preview.png" id="23_540hr"]
+[ext_resource type="Texture2D" uid="uid://bijp8qop7w2c5" path="res://images/Screenshot_2026-04-13_at_5.00.14_PM-removebg-preview.png" id="23_qilgh"]
 [ext_resource type="Texture2D" uid="uid://c6fxnknun8p2v" path="res://images/Screenshot_2026-04-07_at_4.51.05_PM-removebg-preview.png" id="24_6ip5v"]
 [ext_resource type="Texture2D" uid="uid://bni02in4p8h3r" path="res://images/Screenshot_2026-04-07_at_4.58.53_PM-removebg-preview.png" id="25_kq1c5"]
 [ext_resource type="Texture2D" uid="uid://mlymkn52ky6d" path="res://images/Screenshot_2026-04-07_at_5.07.56_PM-removebg-preview.png" id="26_ornx7"]
@@ -53,9 +55,6 @@
 base_font = ExtResource("4_4d7sh")
 variation_embolden = 0.97
 spacing_top = 9
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xfyss"]
-load_path = "res://.godot/imported/Screenshot_2026-04-07_at_4.35.13_PM-removebg-preview.png-dfc589d512992eaefb3e06a4e8512e68.ctex"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rj586"]
 bg_color = Color(0.117647, 0.101961, 0.0784314, 1)
@@ -159,6 +158,15 @@ limit_right = 1152
 limit_bottom = 2350
 position_smoothing_enabled = true
 editor_draw_limits = true
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(736, 231)
+texture = ExtResource("7_4qosj")
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(749, 1981.5)
+scale = Vector2(1, 1.65481)
+texture = ExtResource("7_4qosj")
 
 [node name="Start" type="Marker2D" parent="."]
 position = Vector2(488, 96)
@@ -764,22 +772,22 @@ metadata/_edit_use_anchors_ = true
 [node name="Space14" type="Sprite2D" parent="Spaces"]
 z_index = 10
 position = Vector2(474.06, 1176.08)
-scale = Vector2(0.28, 0.28)
-texture = SubResource("CompressedTexture2D_xfyss")
+scale = Vector2(0.47, 0.47)
+texture = ExtResource("23_qilgh")
 
 [node name="Label" type="Label" parent="Spaces/Space14"]
 anchors_preset = -1
-anchor_left = 0.00105471
-anchor_top = -0.176414
-anchor_right = 0.00105471
-anchor_bottom = -0.176414
-offset_left = -214.805
-offset_top = 139.442
-offset_right = 215.195
-offset_bottom = 284.442
+anchor_left = -0.542767
+anchor_top = -0.177
+anchor_right = -0.542767
+anchor_bottom = -0.174811
+offset_left = 23.3623
+offset_top = 123.854
+offset_right = 289.362
+offset_bottom = 268.215
 theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
 theme_override_fonts/font = SubResource("FontVariation_nr8wp")
-theme_override_font_sizes/font_size = 61
+theme_override_font_sizes/font_size = 34
 text = "forbidden words"
 horizontal_alignment = 1
 autowrap_mode = 3
@@ -1595,10 +1603,10 @@ uppercase = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Button3" type="Button" parent="Final"]
-offset_left = 404.0
-offset_top = 491.0
-offset_right = 701.0
-offset_bottom = 567.0
+offset_left = 425.0
+offset_top = 496.0
+offset_right = 722.0
+offset_bottom = 572.0
 theme_override_colors/font_hover_color = Color(0.960784, 0.815686, 0.376471, 1)
 theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
 theme_override_fonts/font = SubResource("FontVariation_xfyss")

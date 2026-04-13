@@ -13,4 +13,4 @@ func show_results(times: Dictionary):
 	for i in range(1, 4):
 		var label = get_node("Player" + str(i) + "Label")
 		var formatted = format_time(times[i])
-		label.text = "Player " + str(i) + " awakened in " + formatted
+		label.text = "Player " + str(i) + " awakened in " + formatted + " minutes"

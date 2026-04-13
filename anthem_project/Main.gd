@@ -156,7 +156,7 @@ func move_player(player: int, steps: int):
 	if path.size() > 0:
 		var tween = create_tween()
 		for next_index in path:
-			tween.tween_property(piece, "position", game_spaces[next_index].position, 0.4)
+			tween.tween_property(piece, "position", game_spaces[next_index].position, 0.8)
 		tween.finished.connect(func():
 			if player == 1:
 				place = actual_target
@@ -212,7 +212,7 @@ func show_space_popup(space_index: int):
 	if space_index == barrier_space_index:
 		sidebar.set_status("Stopped by The Council of Scholars")
 		is_trapped[current_player_moving] = true
-		popup.show_popup("The Council of Scholars", "You must roll a 4 or 6 to pass them.", "Understood")
+		popup.show_popup("The Council of Scholars", "You present your invention of the light to the World Council of Scholars. Instead of wonder they recoil in fear. Roll a 4 or 6 to save your light.", "Understood")
 		return
 	
 	if space_data.has(spot_name):
@@ -283,6 +283,10 @@ func check_for_victory(player: int, landing_index: int):
 		if not player in finished_players:
 			finished_players.append(player)
 			finish_time[player] = (Time.get_ticks_msec() - start_time[player])/1000.0
+			
+			if finished_players.size() == 1:
+				get_node("/root/MusicManager").transition_indiv(8.0)
+				print("Music transition triggered!")
 		return true
 	return false
 		

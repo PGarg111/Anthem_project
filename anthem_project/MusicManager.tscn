@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://mhx2f6ik2kb7"]
+
+[ext_resource type="Script" uid="uid://bn46f1d6uc063" path="res://music_manager.gd" id="1_5vx3j"]
+[ext_resource type="AudioStream" uid="uid://ppseg5feiscn" path="res://Assests/Philip Glass - Metamorphosis Two.mp3" id="1_y4juv"]
+[ext_resource type="AudioStream" uid="uid://76yoh7jicofm" path="res://Assests/Philip Glass - Metamorphosis 1.mp3" id="2_5vx3j"]
+
+[node name="MusicManager" type="Node2D"]
+script = ExtResource("1_5vx3j")
+
+[node name="Mechanical" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("1_y4juv")
+autoplay = true
+
+[node name="Melodic" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("2_5vx3j")
+autoplay = true

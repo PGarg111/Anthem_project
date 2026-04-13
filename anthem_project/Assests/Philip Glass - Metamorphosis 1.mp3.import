@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://76yoh7jicofm"
+path="res://.godot/imported/Philip Glass - Metamorphosis 1.mp3-bfb6c651110b862b155caa702f6d23e1.mp3str"
+
+[deps]
+
+source_file="res://Assests/Philip Glass - Metamorphosis 1.mp3"
+dest_files=["res://.godot/imported/Philip Glass - Metamorphosis 1.mp3-bfb6c651110b862b155caa702f6d23e1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
