@@ -12,16 +12,16 @@ func _ready():
 	   Press space bar second to move Player 2
 	   Press space bar third to move Player 3
 	
-	2. Players take turns moving forwrad one space at a time by rolling the dice
+	2. Players take turns moving forward one space at a time by rolling the dice
 	
 	3. Land on a space to reveal its event. Read carefully!
 	
-	4. Some spaces have actions that move you backwards. Press the action button when it appears.
+	4. Some spaces have actions that move you backwards, forwards, or lose a turn. Press the action button when it appears.
 	
-	5. Will you be the fastest to escape collectivism?
-	
-	Checkpoints are spaces that say 'Checkpoint' on them. 
+	5. Checkpoints are spaces that say 'Checkpoint' on them (in the popup). 
 	These spaces have more information and are important events.
+	
+	6. Will you be the fastest to escape collectivism?
 	
 	Game Pieces
 	Player 1: The light bulb represents Equality

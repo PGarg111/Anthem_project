@@ -130,8 +130,8 @@ scale = Vector2(0.699653, 3.64815)
 texture = ExtResource("2_nr8wp")
 
 [node name="Sprite2D3" type="Sprite2D" parent="."]
-position = Vector2(747.5, 830)
-scale = Vector2(0.395714, 0.141667)
+position = Vector2(747.5, 839.375)
+scale = Vector2(0.395714, 0.154167)
 texture = ExtResource("3_0xo8l")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
@@ -145,8 +145,8 @@ scale = Vector2(0.235833, 0.223667)
 texture = ExtResource("5_3ngjr")
 
 [node name="Sprite2D5" type="Sprite2D" parent="."]
-position = Vector2(988.5, 1243.5)
-scale = Vector2(0.17381, 0.41)
+position = Vector2(988.5, 1253)
+scale = Vector2(0.17381, 0.397333)
 texture = ExtResource("6_qilgh")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -762,6 +762,7 @@ uppercase = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Space14" type="Sprite2D" parent="Spaces"]
+z_index = 10
 position = Vector2(474.06, 1176.08)
 scale = Vector2(0.28, 0.28)
 texture = SubResource("CompressedTexture2D_xfyss")
@@ -1528,13 +1529,13 @@ layout_mode = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(0.960784, 0.815686, 0.376471, 1)
 theme_override_fonts/font = SubResource("FontVariation_hqns4")
-theme_override_font_sizes/font_size = 14
+theme_override_font_sizes/font_size = 12
 
 [node name="DiceLayer" type="CanvasLayer" parent="CanvasLayer"]
 layer = 3
 
 [node name="Dice" parent="CanvasLayer/DiceLayer" instance=ExtResource("5_d21ai")]
-position = Vector2(149, 458)
+position = Vector2(167, 459)
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 visible = false
