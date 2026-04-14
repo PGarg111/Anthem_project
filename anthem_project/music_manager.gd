@@ -8,8 +8,8 @@ func transition_indiv(duration: float = 8.0):
 	print("Music: Fading in Melodic (Current: ", melodic.volume_db, ")")
 	var tween = create_tween().set_parallel(true)
 	print("STARTING FADE TO INDIVIDUALISM")
-	tween.tween_property(mechanical, "volume_db", -70, 8.0)
-	tween.tween_property(melodic, "volume_db", 0, 8.0)
+	tween.tween_property(mechanical, "volume_db", -70, duration)
+	tween.tween_property(melodic, "volume_db", 0, duration)
 	tween.finished.connect(func(): print("Music: Transition Complete!"))
 
 # Called when the node enters the scene tree for the first time.
@@ -18,9 +18,3 @@ func _ready() -> void:
 	melodic.play()
 	mechanical.volume_db = 0
 	melodic.volume_db = -60
-	
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass

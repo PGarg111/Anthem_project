@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b3ccmgj43qk4d"
-path="res://.godot/imported/anchor-removebg-preview.png-1d691c7e1710f9c7079d7482679247b5.ctex"
+path="res://.godot/imported/anchor-removebg-preview.png-c3df4f9392fbfc78653df087a9f35e5b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://anchor-removebg-preview.png"
-dest_files=["res://.godot/imported/anchor-removebg-preview.png-1d691c7e1710f9c7079d7482679247b5.ctex"]
+source_file="res://images/anchor-removebg-preview.png"
+dest_files=["res://.godot/imported/anchor-removebg-preview.png-c3df4f9392fbfc78653df087a9f35e5b.ctex"]
 
 [params]
 

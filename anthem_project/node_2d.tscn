@@ -46,8 +46,8 @@
 [ext_resource type="Texture2D" uid="uid://fjcqcsdouv6j" path="res://images/Screenshot_2026-04-07_at_8.54.23_PM-removebg-preview.png" id="33_fbwgr"]
 [ext_resource type="Texture2D" uid="uid://c66sfceksg2x1" path="res://images/Screenshot_2026-04-07_at_8.56.03_PM-removebg-preview.png" id="34_7mj2a"]
 [ext_resource type="Texture2D" uid="uid://kef0jeavyce5" path="res://wheat-removebg-preview.png" id="34_lbrxf"]
-[ext_resource type="Texture2D" uid="uid://bpssifu2mail7" path="res://bulb-removebg-preview.png" id="35_xjt7e"]
-[ext_resource type="Texture2D" uid="uid://b3ccmgj43qk4d" path="res://anchor-removebg-preview.png" id="36_0xo8l"]
+[ext_resource type="Texture2D" uid="uid://bpssifu2mail7" path="res://images/bulb-removebg-preview.png" id="35_xjt7e"]
+[ext_resource type="Texture2D" uid="uid://b3ccmgj43qk4d" path="res://images/anchor-removebg-preview.png" id="36_0xo8l"]
 [ext_resource type="FontFile" uid="uid://wfavt178s5xk" path="res://Assests/CinzelDecorative-Bold.ttf" id="44_lbrxf"]
 [ext_resource type="Script" uid="uid://c5y2bdnp3isnb" path="res://final.gd" id="44_xjt7e"]
 
@@ -134,8 +134,8 @@ scale = Vector2(0.395714, 0.154167)
 texture = ExtResource("3_0xo8l")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(750, 629.5)
-scale = Vector2(0.386667, 0.212667)
+position = Vector2(750, 489.5)
+scale = Vector2(0.386667, 0.399334)
 texture = ExtResource("4_xfyss")
 
 [node name="Sprite2D4" type="Sprite2D" parent="."]
@@ -144,8 +144,8 @@ scale = Vector2(0.235833, 0.223667)
 texture = ExtResource("5_3ngjr")
 
 [node name="Sprite2D5" type="Sprite2D" parent="."]
-position = Vector2(988.5, 1253)
-scale = Vector2(0.17381, 0.397333)
+position = Vector2(988.5, 1273)
+scale = Vector2(0.17381, 0.424)
 texture = ExtResource("6_qilgh")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -160,7 +160,8 @@ position_smoothing_enabled = true
 editor_draw_limits = true
 
 [node name="Sprite2D6" type="Sprite2D" parent="."]
-position = Vector2(736, 231)
+position = Vector2(736, 96)
+scale = Vector2(1, 0.435146)
 texture = ExtResource("7_4qosj")
 
 [node name="Sprite2D7" type="Sprite2D" parent="."]
@@ -1116,9 +1117,9 @@ uppercase = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Barrier" type="Sprite2D" parent="Spaces"]
-position = Vector2(751, 1579)
+position = Vector2(763.051, 1587.21)
 rotation = -0.00872665
-scale = Vector2(0.592496, 1.36154)
+scale = Vector2(0.633591, 1.68139)
 texture = ExtResource("26_ornx7")
 
 [node name="Space19" type="Sprite2D" parent="Spaces"]
@@ -1629,28 +1630,28 @@ horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Player1Label" type="Label" parent="Final"]
-offset_left = 456.0
-offset_top = 232.0
-offset_right = 716.0
-offset_bottom = 311.0
+offset_left = 437.0
+offset_top = 233.0
+offset_right = 697.0
+offset_bottom = 312.0
 theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
 theme_override_fonts/font = ExtResource("3_4d7sh")
 metadata/_edit_use_anchors_ = true
 
 [node name="Player2Label" type="Label" parent="Final"]
-offset_left = 455.0
-offset_top = 313.0
-offset_right = 715.0
-offset_bottom = 392.0
+offset_left = 436.0
+offset_top = 314.0
+offset_right = 696.0
+offset_bottom = 393.0
 theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
 theme_override_fonts/font = ExtResource("3_4d7sh")
 metadata/_edit_use_anchors_ = true
 
 [node name="Player3Label" type="Label" parent="Final"]
-offset_left = 455.0
-offset_top = 384.0
-offset_right = 715.0
-offset_bottom = 463.0
+offset_left = 436.0
+offset_top = 385.0
+offset_right = 696.0
+offset_bottom = 464.0
 theme_override_colors/font_color = Color(0.784314, 0.588235, 0.0392157, 1)
 theme_override_fonts/font = ExtResource("3_4d7sh")
 metadata/_edit_use_anchors_ = true

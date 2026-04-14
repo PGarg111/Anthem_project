@@ -3,9 +3,9 @@
 [ext_resource type="FontFile" uid="uid://dqpwiaq7lkab7" path="res://Assests/CinzelDecorative-Black.ttf" id="1_a0cjb"]
 [ext_resource type="FontFile" uid="uid://wfavt178s5xk" path="res://Assests/CinzelDecorative-Bold.ttf" id="2_a0cjb"]
 [ext_resource type="Script" uid="uid://dbal7dxflallp" path="res://Main Menu/button.gd" id="3_a0cjb"]
-[ext_resource type="Texture2D" uid="uid://bpssifu2mail7" path="res://bulb-removebg-preview.png" id="4_fvygg"]
+[ext_resource type="Texture2D" uid="uid://bpssifu2mail7" path="res://images/bulb-removebg-preview.png" id="4_fvygg"]
 [ext_resource type="Texture2D" uid="uid://kef0jeavyce5" path="res://wheat-removebg-preview.png" id="5_282ry"]
-[ext_resource type="Texture2D" uid="uid://b3ccmgj43qk4d" path="res://anchor-removebg-preview.png" id="6_livf6"]
+[ext_resource type="Texture2D" uid="uid://b3ccmgj43qk4d" path="res://images/anchor-removebg-preview.png" id="6_livf6"]
 
 [sub_resource type="Gradient" id="Gradient_7dm0k"]
 colors = PackedColorArray(0.227451, 0.180392, 0.117647, 1, 0.054902, 0.0470588, 0.0392157, 1)

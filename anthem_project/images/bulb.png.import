@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpssifu2mail7"
-path="res://.godot/imported/bulb-removebg-preview.png-eb68516ba12b7e0075d5cbca7a320622.ctex"
+uid="uid://diykbtqpfmh5r"
+path="res://.godot/imported/bulb.png-a2f9258febae578c5a543e1dcb07a6bd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://bulb-removebg-preview.png"
-dest_files=["res://.godot/imported/bulb-removebg-preview.png-eb68516ba12b7e0075d5cbca7a320622.ctex"]
+source_file="res://images/bulb.png"
+dest_files=["res://.godot/imported/bulb.png-a2f9258febae578c5a543e1dcb07a6bd.ctex"]
 
 [params]
 
