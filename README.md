@@ -1,5 +1,7 @@
 # Anthem_project
 
+![Hackatime Badge](https://hackatime.hackclub.com/api/v1/badge/U099LHP1QKF/PGarg111/Anthem_project)
+
 This game is based upon the book Anthem by Ayn Rand. I created this game for a school project. The game is a 3 player game with an on-screen die. 
 
 How the game works:
